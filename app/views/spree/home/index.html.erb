@@ -60,3 +60,10 @@
       </section>
     </div>
 </div>
+
+
+<div data-hook="homepage_products">
+    <% @taxonomies.each do |p| %>
+      <div><%= p.name %></div>
+    <% end %>
+</div>
