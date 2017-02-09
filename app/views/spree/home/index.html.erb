@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="row">
+      <section class="package-selection col-md-8 col-md-offset-2">
+        <ul class="nav nav-pills nav-justified">
+          <li class="active package-overview-container">
+            <a data-toggle="pill" href="#basic-package" class="package-overview-select">
+              <h4>Basic</h4>
+              <div class="text-center package-icon-container"><%= image_tag "coffee.png", alt: "Basic Pakage image", class: "package-icon" %></div>
+              <ul class="package-overview-details text-left">
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              </ul>
+            </a>
+          </li>
+          <li class="package-overview-container">
+            <a data-toggle="pill" href="#standard-package" class="package-overview-select">
+              <h4>Standard</h4>
+              <div class="text-center package-icon-container"><%= image_tag "cloud.png", alt: "Standard Pakage image", class: "package-icon" %></div>
+              <ul class="package-overview-details text-left">
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              </ul>
+            </a>
+          </li>
+          <li class="package-overview-container">
+            <a data-toggle="pill" href="#premium-package" class="package-overview-select">
+              <h4>Premium</h4>
+              <div class="text-center package-icon-container"><%= image_tag "laptop.png", alt: "Premium Pakage image", class: "package-icon" %></div>
+              <ul class="package-overview-details text-left">
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="basic-package" class="tab-pane fade in active">
+            <h3 class="text-center">Basic</h3>
+            <p>Some content.</p>
+          </div>
+          <div id="standard-package" class="tab-pane fade">
+            <h3 class="text-center">Standard</h3>
+            <p>Some content in menu 1.</p>
+          </div>
+          <div id="premium-package" class="tab-pane fade">
+            <h3 class="text-center">Premium</h3>
+            <p>Some content in menu 2.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+// Graphical variables
+@import "config/variables";
+@import "config/bootstrap_variables";
+@import "config/base";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS
+@import "pages/home";
