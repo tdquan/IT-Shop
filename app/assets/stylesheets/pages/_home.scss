@@ -1,16 +1,29 @@
+.homepage-section {
+  padding: 40px 0;
+}
+
 .package-overview-container {
   padding: 0 20px;
   .package-overview-select {
     padding: 20px;
+    transition: background ease 0.3s;
   }
   ul {
     font-size: 14px;
     color: #555;
   }
+  .package-price {
+    font-size: 2em;
+    font-weight: lighter;
+  }
 }
 
 .package-overview-container.active {
   a {
+    h4 {
+      font-weight: normal;
+      color: #fff;
+    }
     ul {
       color: #fff;
     }
@@ -23,4 +36,8 @@
     width: 100px;
     height: auto;
   }
+}
+
+.package-details {
+  background-color: #f2f2f2;
 }
