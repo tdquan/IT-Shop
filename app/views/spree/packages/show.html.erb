@@ -1,0 +1,67 @@
+<div class="show-package">
+  <div class="col-md-3 col-md-offset-1">
+  <h3><%= @package.name %></h3>
+  <% 5.times do  %>
+    <i class="fa fa-star" aria-hidden="true"></i>
+  <% end %>
+  <p>Available</p>
+  <div class="row">
+    <div class="col-md-6">
+      <i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+    </div>
+    <div class="col-md-6">
+      <i class="fa fa-keyboard-o fa-5x" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="mini-p">
+    <p>Click to zoom</p>
+  </div>
+  <br>
+  <p>Specs of the products:</p>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <div class="col-md-4">
+    <h3>Customize your package</h3>
+
+    <p>Which computer is right for you?</p>
+    <ul class="list-inline">
+      <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
+        <li><div class="radio">
+          <label><input type="radio" name="optradio1"><%= product.name %></label>
+        </div></li>
+      <% end %>
+    </ul>
+    <br>
+    <p>Which printer is right for you?</p>
+    <ul class="list-inline">
+      <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
+        <li><div class="radio">
+          <label><input type="radio" name="optradio2"><%= product.name %></label>
+        </div></li>
+      <% end %>
+    </ul>
+    <br>
+    <p>Which mouse is right for you?</p>
+    <ul class="list-inline">
+      <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
+        <li><div class="radio">
+          <label><input type="radio" name="optradio3"><%= product.name %></label>
+        </div></li>
+      <% end %>
+    </ul>
+
+  </div>
+
+  <div class="col-md-3">
+    <p>999€</p>
+    <div class="mini-p">
+      <p>Free delivery</p>
+      <p>Price including TVA</p>
+    </div>
+  </div>
+
+
+</div>
+
+
