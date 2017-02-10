@@ -1,3 +1,7 @@
+.homepage-section {
+  padding: 40px 0;
+}
+
 .package-overview-container {
   padding: 0 20px;
   .package-overview-select {
@@ -7,6 +11,10 @@
   ul {
     font-size: 14px;
     color: #555;
+  }
+  .package-price {
+    font-size: 2em;
+    font-weight: lighter;
   }
 }
 

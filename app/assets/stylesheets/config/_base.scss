@@ -1,14 +1,25 @@
-* {
+body {
   font-family: 'Helvetica', 'Arial', sans-serif;
+  color: $dark-gray;
+  * {
+    transition: all ease 0.3s;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: lighter;
-  color: #333;
+  color: $dark-gray;
 }
 
 hr {
   border-top: 1px solid #ddd;
+}
+
+a {
+  text-decoration: none;
+  &:hover, &:visited, &:focus {
+    text-decoration: none;
+  }
 }
 
 body > .container-fluid > * {
