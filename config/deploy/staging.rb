@@ -1,12 +1,23 @@
- role :app, %w{shop-it@cbm-groupe.fr}
- role :web, %w{shop-it@cbm-groupe.fr}
- role :db,  %w{shop-it@cbm-groupe.fr}
 
- set :rails_env, fetch(:stage)
+role :app, %w{shop-it@cbm-groupe.fr}
+role :web, %w{shop-it@cbm-groupe.fr}
+role :db,  %w{shop-it@cbm-groupe.fr}
 
- set :deploy_to, '/home/shop-it/staging'
+set :application, "shop-it"
+set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
 
- set :branch, 'master'
+set :rails_env, fetch(:stage)
+
+set :deploy_to, '/home/shop-it/staging'
+
+set :branch, 'master'
+
+set :ssh_options, {
+    forward_agent: true,
+    keys: %w(/home/shop-it/.ssh/id_rsa),
+    auth_methods: %w(password),
+    password: 'shopitpass'
+  }
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
