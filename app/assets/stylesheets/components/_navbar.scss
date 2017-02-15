@@ -27,14 +27,16 @@
 .logo-group {
   float: left;
   margin-left: 30px;
-  height: 100%;
-  line-height: 48px;
-  width: 200px;
+  height: 48px;
+  max-width: 200px;
   overflow: hidden;
   .navbar_logo {
-    height: 100%;
-    width: auto;
-    vertical-align: middle;
+    height: 48px;
+    img {
+      height: 100%;
+      width: auto;
+      padding: 10px 0;
+    }
   }
 }
 
