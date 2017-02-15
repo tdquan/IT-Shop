@@ -5,6 +5,7 @@ class Spree::PackagesController < ApplicationController
 
   def show
     set_package
+    @computers = (@package.taxons.find_by name: 'Computer').products
   end
 
   private
