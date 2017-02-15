@@ -24,44 +24,136 @@
   <div class="col-md-4">
     <h3>Customize your package</h3>
 
-    <p>Which computer is right for you?</p>
-    <ul class="list-inline">
-      <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
-        <li><div class="radio">
-          <label><input type="radio" name="optradio1"><%= product.name %></label>
-        </div></li>
-      <% end %>
-    </ul>
-    <br>
-    <p>Which printer is right for you?</p>
-    <ul class="list-inline">
-      <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
-        <li><div class="radio">
-          <label><input type="radio" name="optradio2"><%= product.name %></label>
-        </div></li>
-      <% end %>
-    </ul>
-    <br>
-    <p>Which mouse is right for you?</p>
-    <ul class="list-inline">
-      <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
-        <li><div class="radio">
-          <label><input type="radio" name="optradio3"><%= product.name %></label>
-        </div></li>
-      <% end %>
-    </ul>
+    <div class="customize-card first-card">
+      <p>Which computer is right for you?</p>
+      <ul class="list-inline">
+        <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
+          <li><div class="radio">
+          <% if product.meta_keywords == 'default' %>
+            <label><input class="customPack" type="radio" name="optradio1" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+          <% else %>
+            <label><input class="customPack" type="radio" name="optradio1" value="<%= product.price.floor %>"><%= product.name %>
+          <% end %>
+            <div class="product-price"><%= product.price.floor %>€</label>
+          </div></li>
+        <% end %>
+      </ul>
+    </div>
+    <hr>
+    <div class="customize-card">
+      <p>Which keyboard is right for you?</p>
+      <ul class="list-inline">
+        <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
+          <li><div class="radio">
+            <% if product.meta_keywords == 'default' %>
+              <label><input class="customPack" type="radio" name="optradio2" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+            <% else %>
+              <label><input class="customPack" type="radio" name="optradio2" value="<%= product.price.floor %>"><%= product.name %>
+            <% end %>
+            <div class="product-price"><%= product.price.floor %>€</label>
+          </div></li>
+        <% end %>
+      </ul>
+    </div>
+    <hr>
+    <div class="customize-card">
+      <p>Which mouse is right for you?</p>
+      <ul class="list-inline">
+        <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
+          <li><div class="radio">
+            <% if product.meta_keywords == 'default' %>
+              <label><input class="customPack" type="radio" name="optradio3" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+            <% else %>
+              <label><input class="customPack" type="radio" name="optradio3" value="<%= product.price.floor %>"><%= product.name %>
+            <% end %>
+            <div class="product-price"><%= product.price.floor %>€</label>
+          </div></li>
+        <% end %>
+      </ul>
+    </div>
+    <% if @package.taxons.find_by name: 'Monitor' %>
+    <hr>
+    <div class="customize-card">
+      <p>Which monitor is right for you?</p>
+      <ul class="list-inline">
+        <% (@package.taxons.find_by name: 'Monitor').products.each do |product| %>
+          <li><div class="radio">
+            <% if product.meta_keywords == 'default' %>
+              <label><input class="customPack" type="radio" name="optradio4" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+            <% else %>
+              <label><input class="customPack" type="radio" name="optradio4" value="<%= product.price.floor %>"><%= product.name %>
+            <% end %>
+            <div class="product-price"><%= product.price.floor %>€</label>
+          </div></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+    <% if @package.taxons.find_by name: 'Software' %>
+    <hr>
+    <div class="customize-card">
+      <p>Which software is right for you?</p>
+      <ul class="list-inline">
+        <% (@package.taxons.find_by name: 'Software').products.each do |product| %>
+          <li><div class="radio">
+            <% if product.meta_keywords == 'default' %>
+              <label><input class="customPack" type="radio" name="optradio5" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+            <% else %>
+              <label><input class="customPack" type="radio" name="optradio5" value="<%= product.price.floor %>"><%= product.name %>
+            <% end %>
+            <div class="product-price"><%= product.price.floor %>€</label>
+          </div></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
 
   </div>
 
   <div class="col-md-3">
-    <p>999€</p>
-    <div class="mini-p">
-      <p>Free delivery</p>
-      <p>Price including TVA</p>
+    <div class="price-card">
+      <p class="total-package-price"></p>
+      <div class="mini-p">
+        <p>Free delivery</p>
+        <p>Price including TVA</p>
+      </div>
+      <hr>
+      <%= link_to cart_url, :class => "btn btn-primary" do %>
+        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>Add to cart
+      <% end %>
+      <p>or</p>
+      <%= link_to cart_url, :class => "btn btn-primary" do %>
+        <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Check out
+      <% end %>
     </div>
   </div>
-
+<!-- <div class="simple-toggle">
+  <input type="checkbox" id="toggle">
+  <label for="toggle" class="well"></label>
+</div> -->
 
 </div>
+
+<% content_for(:after_js) do %>
+  <script type="text/javascript">
+    $(function () {
+      var total = 0;
+      $("input[type=radio]:checked").each(function() {
+        total += parseFloat($(this).val());
+      });
+      $(".total-package-price").text("Total: " + total + "€");
+    });
+
+    $("input[type=radio]").click(function() {
+      var total = 0;
+      $("input[type=radio]:checked").each(function() {
+        total += parseFloat($(this).val());
+      });
+      $(".total-package-price").text("Total: " + total + "€");
+    });
+  </script>
+<% end %>
+
+
 
 
