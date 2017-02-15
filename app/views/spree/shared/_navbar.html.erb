@@ -10,15 +10,6 @@
       <% end %>
     </div>
 
-    <!-- SHOPPING CART -->
-
-    <div class="cart-group float-right">
-      <%= link_to cart_path do %>
-        <div class="inline-block"><i class="fa fa-shopping-cart fa-lg"></i></div>
-        <div class="inline-block shopping-cart-count"><span><%= current_spree_user.orders.where(state: "cart")[0].quantity %></span></div>
-      <% end %>
-    </div>
-
     <!-- LOGIN/LOGOUT -->
 
     <div class="account-group float-right">
@@ -29,13 +20,29 @@
           </div>
           <p class="avatar-name">Quan</p>
         </a>
-
         <div class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="dropdownMenuLink">
-          <%= link_to("Login", "#", class: "dropdown-item")  %>
-          <%= link_to("Sign up", "#", class: "dropdown-item") %>
+          <% if spree_user_signed_in? %>
+            <%= link_to Spree.t(:my_account), spree.account_path, class: "dropdown-item" %>
+            <%= link_to Spree.t(:logout), spree.logout_path, class: "dropdown-item" %>
+          <% else %>
+            <%= link_to Spree.t(:login), spree.login_path, class: "dropdown-item" %>
+            <%= link_to Spree.t(:signup), spree.signup_path, class: "dropdown-item" %>
+          <% end %>
         </div>
       </div>
     </div>
+
+    <!-- SHOPPING CART -->
+    <% if spree_user_signed_in? %>
+      <div class="cart-group float-right">
+        <%= link_to cart_path do %>
+          <% unless current_spree_user.orders.empty? %>
+            <div class="inline-block"><i class="fa fa-shopping-cart fa-lg"></i></div>
+            <div class="inline-block shopping-cart-count"><span><%= @order.quantity %></span></div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
 
   </div>
 </nav>
