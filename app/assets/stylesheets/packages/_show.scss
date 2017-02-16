@@ -5,13 +5,16 @@
   .fa-star{
     color: $yellow;
   }
-  .mini-p{
+  .zoom-details{
     p{
       font-size: 12px;
       margin: 2px 0;
     }
   }
-  .btn-primary{
+  .details-small-size{
+    font-size: 13px;
+  }
+  .btn{
     width:160px;
   }
   .price-card{
@@ -28,71 +31,10 @@
     color: red;
     font-size: 13px;
   }
+  .custom-options{
+    font-size: 14px;
+  }
+  .customize-card{
+    margin-bottom: -20px;
+  }
 }
-
-
-// body {
-//   background: url(http://subtlepatterns.com/patterns/billie_holiday.png);
-// }
-
-// .simple-toggle {
-//   height: 30px;
-//   width: 70px;
-
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-
-//   margin: -15px 0 0 -35px;
-
-//   .well {
-//     background: $red;
-//     height: 30px;
-//     width: 60px;
-
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-
-//     // @include border-radius(4px);
-//     // @include box-shadow(inset 0 2px 0 rgba(0,0,0,.2), 0 2px 0 rgba(255,255,255,0.7));
-//   }
-
-//   #toggle {
-//     -webkit-appearance: none;
-//     height: 22px;
-//     width: 24px;
-
-//     background: #FFF;
-
-//     position: absolute;
-//     left: 4px;
-//     top: 4px;
-
-//     z-index: 100;
-
-//     // @include border-radius(2px);
-
-//     // Lines
-//     &:before {
-//       content: "";
-//       position: absolute;
-//       top: 0.39em;
-//       left: 50%;
-//       width: 1em;
-//       margin-left: -.5em;
-//       height: 0.125em;
-//       border-top: 0.375em double #ccc;
-//       border-bottom: 0.125em solid #ccc;
-//     }
-
-//     &:checked {
-//       left: 32px;
-//     }
-
-//     &:checked+label {
-//       background: $green;
-//     }
-//   }
-
-// }

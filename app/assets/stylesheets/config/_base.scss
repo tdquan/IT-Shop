@@ -26,6 +26,10 @@ body > .container-fluid > * {
   margin-top: 40px;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 // Overwrting some bootstrap classes
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
