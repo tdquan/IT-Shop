@@ -1,37 +1,37 @@
 <div class="row">
-  <div class="col-md-3">
-    <ul class="package-overview-details text-left">
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-    </ul>
+  <div class="col-md-2 col-md-offset-1">
+    <div class="package-overview-details text-left">
+      <div class="row">
+        <i class="fa fa-phone fa-lg" aria-hidden="true"></i>
+        <h6>Need More Info:</h6>
+        <p>Call 06 06 06 06 06</p>
+      </div>
+    </div>
   </div>
-  <div class="col-md-3">
-    <ul class="package-overview-details text-left">
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-    </ul>
+  <div class="col-md-2">
+    <div class="package-overview-details text-left">
+    <i class="fa fa-shopping-bag fa-lg" aria-hidden="true"></i>
+      <h6>Delivery:</h6>
+      <p>In Stock</p>
+      <p>Free Shipping</p>
+    </div>
   </div>
-  <div class="col-md-3">
-    <ul class="package-overview-details text-left">
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-    </ul>
+  <div class="col-md-2">
+    <div class="package-overview-details text-left">
+      <div><i class="fa fa-euro fa-lg" aria-hidden="true"></i></div>
+      <h6><b class="package-price-details">2,436</b></h6>
+    </div>
   </div>
-  <div class="col-md-3">
-    <ul class="package-overview-details text-left">
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-      <li>Lorem ipsum dolor sit amet.</li>
-    </ul>
+  <div class="col-md-5">
+    <div class="package-overview-details margin-top">
+      <%= link_to "#", class: "btn btn-success button-text-size" do %>
+        <i class="fa fa-cart-arrow-down"></i>&nbsp;Add to cart
+      <% end %>
+      <%= link_to package_url(Spree::Taxonomy.all[2]), class: "btn btn-primary button-text-size" do %>
+        <i class="fa fa-edit"></i>&nbsp;Customize
+      <% end %>
+    </div>
   </div>
 </div>
-<br>
-<%= link_to "#", class: "btn btn-success float-right" do %>
-  <i class="fa fa-cart-arrow-down"></i>&nbsp;Add to cart
-<% end %>
-<%= link_to package_url(Spree::Taxonomy.all[2]), class: "btn btn-primary float-right" do %>
-  <i class="fa fa-edit"></i>&nbsp;Customize package
-<% end %>
+
+

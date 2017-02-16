@@ -1,40 +1,39 @@
+<%= render "spree/shared/navbar" %>
+
+<div class="col-md-8 col-md-offset-2">
+
 <div class="show-package">
-  <div class="col-md-3 col-md-offset-1">
-  <h3><%= @package.name %></h3>
-  <% 5.times do  %>
-    <i class="fa fa-star" aria-hidden="true"></i>
-  <% end %>
-  <p>Available</p>
-  <div class="row">
-    <div class="col-md-6">
-      <i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+  <div class="col-md-4">
+    <h3><%= @package.name %></h3>
+    <% 5.times do  %>
+      <i class="fa fa-star" aria-hidden="true"></i>
+    <% end %>
+    <p>Available</p>
+    <i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+    <div class="zoom-details">
+      <p>Click to zoom</p>
     </div>
-    <div class="col-md-6">
-      <i class="fa fa-keyboard-o fa-5x" aria-hidden="true"></i>
+    <br>
+    <div class="specs">
+      <p>Specs of the products:</p>
+      <p class="details-small-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-  </div>
-  <div class="mini-p">
-    <p>Click to zoom</p>
-  </div>
-  <br>
-  <p>Specs of the products:</p>
-  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-5">
     <h3>Customize your package</h3>
 
     <div class="customize-card first-card">
       <p>Which computer is right for you?</p>
-      <ul class="list-inline">
+      <ul class="list-inline custom-options">
         <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
           <li><div class="radio">
           <% if product.meta_keywords == 'default' %>
-            <label><input class="customPack" type="radio" name="optradio1" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+            <label><input class="customPack" type="radio" name="optradio1" checked="checked" value="<%= product.price.floor %>"><%= product.name %></label>
           <% else %>
-            <label><input class="customPack" type="radio" name="optradio1" value="<%= product.price.floor %>"><%= product.name %>
+            <label><input class="customPack" type="radio" name="optradio1" value="<%= product.price.floor %>"><%= product.name %></label>
           <% end %>
-            <div class="product-price"><%= product.price.floor %>€</label>
+            <div class="product-price"><%= product.price.floor %>€</div>
           </div></li>
         <% end %>
       </ul>
@@ -42,15 +41,15 @@
     <hr>
     <div class="customize-card">
       <p>Which keyboard is right for you?</p>
-      <ul class="list-inline">
+      <ul class="list-inline custom-options">
         <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
           <li><div class="radio">
             <% if product.meta_keywords == 'default' %>
-              <label><input class="customPack" type="radio" name="optradio2" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio2" checked="checked" value="<%= product.price.floor %>"><%= product.name %></label>
             <% else %>
-              <label><input class="customPack" type="radio" name="optradio2" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio2" value="<%= product.price.floor %>"><%= product.name %></label>
             <% end %>
-            <div class="product-price"><%= product.price.floor %>€</label>
+            <div class="product-price"><%= product.price.floor %>€</div>
           </div></li>
         <% end %>
       </ul>
@@ -58,15 +57,15 @@
     <hr>
     <div class="customize-card">
       <p>Which mouse is right for you?</p>
-      <ul class="list-inline">
+      <ul class="list-inline custom-options">
         <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
           <li><div class="radio">
             <% if product.meta_keywords == 'default' %>
-              <label><input class="customPack" type="radio" name="optradio3" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio3" checked="checked" value="<%= product.price.floor %>"><%= product.name %></label>
             <% else %>
-              <label><input class="customPack" type="radio" name="optradio3" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio3" value="<%= product.price.floor %>"><%= product.name %></label>
             <% end %>
-            <div class="product-price"><%= product.price.floor %>€</label>
+            <div class="product-price"><%= product.price.floor %>€</div>
           </div></li>
         <% end %>
       </ul>
@@ -75,15 +74,15 @@
     <hr>
     <div class="customize-card">
       <p>Which monitor is right for you?</p>
-      <ul class="list-inline">
+      <ul class="list-inline custom-options">
         <% (@package.taxons.find_by name: 'Monitor').products.each do |product| %>
           <li><div class="radio">
             <% if product.meta_keywords == 'default' %>
-              <label><input class="customPack" type="radio" name="optradio4" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio4" checked="checked" value="<%= product.price.floor %>"><%= product.name %></label>
             <% else %>
-              <label><input class="customPack" type="radio" name="optradio4" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio4" value="<%= product.price.floor %>"><%= product.name %></label>
             <% end %>
-            <div class="product-price"><%= product.price.floor %>€</label>
+            <div class="product-price"><%= product.price.floor %>€</div>
           </div></li>
         <% end %>
       </ul>
@@ -93,16 +92,16 @@
     <hr>
     <div class="customize-card">
       <p>Which software is right for you?</p>
-      <ul class="list-inline">
+      <ul class="list-inline custom-options">
         <% (@package.taxons.find_by name: 'Software').products.each do |product| %>
           <li><div class="radio">
             <% if product.meta_keywords == 'default' %>
-              <label><input class="customPack" type="radio" name="optradio5" checked="checked" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio5" checked="checked" value="<%= product.price.floor %>"><%= product.name %></label>
             <% else %>
-              <label><input class="customPack" type="radio" name="optradio5" value="<%= product.price.floor %>"><%= product.name %>
+              <label><input class="customPack" type="radio" name="optradio5" value="<%= product.price.floor %>"><%= product.name %></label>
             <% end %>
-            <div class="product-price"><%= product.price.floor %>€</label>
-          </div></li>
+            <div class="product-price"><%= product.price.floor %>€</div>
+            </div></li>
         <% end %>
       </ul>
     </div>
@@ -113,12 +112,12 @@
   <div class="col-md-3">
     <div class="price-card">
       <p class="total-package-price"></p>
-      <div class="mini-p">
+      <div class="details-small-size">
         <p>Free delivery</p>
         <p>Price including TVA</p>
       </div>
       <hr>
-      <%= link_to cart_url, :class => "btn btn-primary" do %>
+      <%= link_to cart_url, :class => "btn btn-success" do %>
         <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>Add to cart
       <% end %>
       <p>or</p>
@@ -127,11 +126,8 @@
       <% end %>
     </div>
   </div>
-<!-- <div class="simple-toggle">
-  <input type="checkbox" id="toggle">
-  <label for="toggle" class="well"></label>
-</div> -->
 
+</div>
 </div>
 
 <% content_for(:after_js) do %>
@@ -153,7 +149,3 @@
     });
   </script>
 <% end %>
-
-
-
-
