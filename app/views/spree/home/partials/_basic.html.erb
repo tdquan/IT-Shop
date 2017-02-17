@@ -30,7 +30,7 @@
     </div>
     <%= simple_form_for :package, html: { class: "text-right row clearfix" }, url: add_package_path(Spree::Taxonomy.all[0]) do |f| %>
       <h6 class="text-center col-md-4">Quick add</h6>
-      <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "package-quantity-input" }, wrapper_html: { class: "col-md-3 no-padding" }, label: false %>
+      <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "package-quantity-input", value: 1 }, wrapper_html: { class: "col-md-3 no-padding" }, label: false %>
       <div class="col-md-5 text-right no-padding">
         <%= button_tag(type: 'submit', class: "btn btn-success package-customize-btn") do %>
           <i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;Add to cart
