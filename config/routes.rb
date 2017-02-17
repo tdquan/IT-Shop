@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   Spree::Core::Engine.add_routes do
     get '/packages',  to: 'packages#index'
     get '/packages/:id', to: 'packages#show', as: :package
+    post '/packages/:id', to: 'packages#add', as: :add_package
   end
 end
