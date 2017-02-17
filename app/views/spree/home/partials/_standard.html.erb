@@ -23,14 +23,20 @@
     </div>
   </div>
   <div class="col-md-5">
-    <div class="package-overview-details margin-top">
-      <%= link_to "#", class: "btn btn-success button-text-size" do %>
-        <i class="fa fa-cart-arrow-down"></i>&nbsp;Add to cart
-      <% end %>
-      <%= link_to package_url(Spree::Taxonomy.all[1]), class: "btn btn-primary button-text-size" do %>
-        <i class="fa fa-edit"></i>&nbsp;Customize
+    <div class="package-customize-btn-grp text-right row">
+      <%= link_to package_path(Spree::Taxonomy.all[1]), class: "btn btn-primary package-customize-btn" do %>
+        <i class="fa fa-edit"></i>&nbsp;&nbsp;Customize
       <% end %>
     </div>
+    <%= simple_form_for :package, html: { class: "text-right row clearfix" }, url: add_package_path(Spree::Taxonomy.all[1]) do |f| %>
+      <h6 class="text-center col-md-4">Quick add</h6>
+      <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "package-quantity-input", value: 1 }, wrapper_html: { class: "col-md-3 no-padding" }, label: false %>
+      <div class="col-md-5 text-right no-padding">
+        <%= button_tag(type: 'submit', class: "btn btn-success package-customize-btn") do %>
+          <i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;Add to cart
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
 

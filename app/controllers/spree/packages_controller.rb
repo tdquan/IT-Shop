@@ -25,6 +25,7 @@ class Spree::PackagesController < Spree::StoreController
       variant = Spree::Variant.where(product_id: p.id).first
       item = order.line_items.new(variant_id: variant.id)
       item.quantity = params[:package][:quantity]
+      order.contents.update_cart({}) # optional: set parameter here to be order_params and un-comment the order_params section
       item.save
     end
 
@@ -36,4 +37,12 @@ class Spree::PackagesController < Spree::StoreController
   def set_package
     @package = Spree::Taxonomy.find(params[:id])
   end
+
+  # def order_params
+  #   if params[:order]
+  #     params[:order].permit(*permitted_order_attributes)
+  #   else
+  #     {}
+  #   end
+  # end
 end
