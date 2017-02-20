@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     get '/packages',  to: 'packages#index'
     get '/packages/:package_name', to: 'packages#show', as: :package
     post '/packages/:id', to: 'packages#add', as: :add_package
+    post '/packages/customized/:package_name', to: 'packages#add_customized', as: :add_customized_package
   end
 end
