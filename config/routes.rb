@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   Spree::Core::Engine.add_routes do
     get '/packages',  to: 'packages#index'
-    get '/packages/:id', to: 'packages#show', as: :package
+    get '/packages/:package_name', to: 'packages#show', as: :package
     post '/packages/:id', to: 'packages#add', as: :add_package
   end
 end

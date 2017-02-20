@@ -2,7 +2,7 @@ body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   color: $dark-gray;
   * {
-    transition: all ease 0.3s;
+    transition: background-color ease 0.3s;
   }
 }
 

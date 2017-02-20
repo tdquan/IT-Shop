@@ -40,7 +40,7 @@ class Spree::PackagesController < Spree::StoreController
   private
 
   def set_package
-    @package = Spree::Taxonomy.find(params[:id])
+    @package = Spree::Taxonomy.find_by(name: params[:package_name].capitalize)
   end
 
   # def order_params
