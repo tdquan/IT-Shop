@@ -33,8 +33,12 @@
         </a>
 
         <div class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="dropdownMenuLink">
-          <%= link_to("Login", "#", class: "dropdown-item")  %>
-          <%= link_to("Sign up", "#", class: "dropdown-item") %>
+          <% if current_spree_user.nil? %>
+            <%= link_to("Login", "/login", class: "dropdown-item")  %>
+            <%= link_to("Sign up", "/signup", class: "dropdown-item") %>
+          <% else %>
+            <%= link_to("Logout", "/logout", class: "dropdown-item") %>
+          <% end %>
         </div>
       </div>
     </div>
