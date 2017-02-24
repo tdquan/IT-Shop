@@ -2,7 +2,7 @@
 
 <%= simple_form_for :package, html: { class: "col-md-8 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
 
-  <div class="show-package">
+  <div class="show-package row">
     <div class="col-md-4">
       <h3><%= @package.name %></h3>
       <% 5.times do  %>

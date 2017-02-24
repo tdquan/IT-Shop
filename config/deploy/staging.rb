@@ -9,7 +9,7 @@ set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
 set :rails_env, :staging
 set :deploy_to, '/home/shop-it/staging'
 
-set :branch, 'master'
+set :branch, 'staging'
 
 set :ssh_options, {
     forward_agent: true,
