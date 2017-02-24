@@ -24,11 +24,11 @@
   </div>
   <div class="col-md-5">
     <div class="package-customize-btn-grp text-right row">
-      <%= link_to package_path(package_name: Spree::Taxonomy.all[1].name.downcase), class: "btn btn-primary package-customize-btn" do %>
+      <%= link_to package_path(package_name: @standard.name.downcase), class: "btn btn-primary package-customize-btn" do %>
         <i class="fa fa-edit"></i>&nbsp;&nbsp;Customize
       <% end %>
     </div>
-    <%= simple_form_for :package, html: { class: "text-right row clearfix" }, url: add_package_path(Spree::Taxonomy.all[1]) do |f| %>
+    <%= simple_form_for :package, html: { class: "text-right row clearfix" }, url: add_package_path(@standard, category: params[:category], package_name: @standard.name.downcase) do |f| %>
       <h6 class="text-center col-md-4">Quick add</h6>
       <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "package-quantity-input", value: 1 }, wrapper_html: { class: "col-md-3 no-padding" }, label: false %>
       <div class="col-md-5 text-right no-padding">

@@ -1,6 +1,6 @@
 <%= render "spree/shared/navbar" %>
 
-<%= simple_form_for :package, html: { class: "col-md-8 col-md-offset-2" }, url: add_customized_package_path(@package.name.downcase) do |f| %>
+<%= simple_form_for :package, html: { class: "col-md-8 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
 
   <div class="show-package">
     <div class="col-md-4">
@@ -28,7 +28,7 @@
         <ul class="list-inline custom-options">
           <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
             <li><div class="radio">
-            <% if product.meta_keywords.include? "#{@package.name.downcase}_default" %>
+            <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
               <label><input class="customPack" type="radio" name="package[computer]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
             <% else %>
               <label><input class="customPack" type="radio" name="package[computer]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
@@ -44,7 +44,7 @@
         <ul class="list-inline custom-options">
           <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
             <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.downcase}_default" %>
+              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
                 <label><input class="" type="radio" name="package[keyboard]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
               <% else %>
                 <label><input class="" type="radio" name="package[keyboard]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
@@ -60,7 +60,7 @@
         <ul class="list-inline custom-options">
           <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
             <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.downcase}_default" %>
+              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
                 <label><input class="" type="radio" name="package[mouse]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
               <% else %>
                 <label><input class="" type="radio" name="package[mouse]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
@@ -77,7 +77,7 @@
         <ul class="list-inline custom-options">
           <% (@package.taxons.find_by name: 'Monitor').products.each do |product| %>
             <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.downcase}_default" %>
+              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
                 <label><input class="" type="radio" name="package[monitor]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
               <% else %>
                 <label><input class="" type="radio" name="package[monitor]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
@@ -88,14 +88,14 @@
         </ul>
       </div>
       <% end %>
-      <% if @package.taxons.find_by name: 'Software' %>
+      <% if @package.taxons.find_by name: 'Softwares' %>
       <hr>
       <div class="customize-card">
         <p>Which software is right for you?</p>
         <ul class="list-inline custom-options">
-          <% (@package.taxons.find_by name: 'Software').products.each do |product| %>
+          <% (@package.taxons.find_by name: 'Softwares').products.each do |product| %>
             <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.downcase}_default" %>
+              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
                 <label><input class="" type="radio" name="package[software]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
               <% else %>
                 <label><input class="" type="radio" name="package[software]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>

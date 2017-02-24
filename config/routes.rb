@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   Spree::Core::Engine.add_routes do
-    get '/packages',  to: 'packages#index'
-    get '/packages/:package_name', to: 'packages#show', as: :package
-    post '/packages/:id', to: 'packages#add', as: :add_package
-    post '/packages/customized/:package_name', to: 'packages#add_customized', as: :add_customized_package
+    # Routes to different categories
+    scope :categories do
+      get '/:category', to: 'home#show', as: :category
+
+      get '/:category/:package_name', to: 'packages#show', as: :package
+      post '/:category/:id', to: 'packages#add', as: :add_package
+      post '/:category/customized/:package_name', to: 'packages#add_customized', as: :add_customized_package
+    end
   end
 end

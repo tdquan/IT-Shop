@@ -5,16 +5,14 @@ class Spree::PackagesController < Spree::StoreController
   end
 
   # Quick add
-
   def add
-
     # Define the taxon that include all the package items
     @taxon = @package.taxons.first
     return unless @taxon
 
     # Find all products in the package
     @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
-    @products = @searcher.retrieve_products.where("meta_keywords like?", "%#{@package.name.downcase}_default%")
+    @products = @searcher.retrieve_products.where("meta_keywords like?", "%#{@package.name.split.map(&:downcase).join('_')}_default%")
     @taxonomies = Spree::Taxonomy.includes(root: :children)
 
     # Add products into the cart as line items
@@ -26,7 +24,7 @@ class Spree::PackagesController < Spree::StoreController
       item.save
     end
 
-    redirect_to root_path
+    redirect_to :back
   end
 
   # Add customized package
@@ -59,7 +57,7 @@ class Spree::PackagesController < Spree::StoreController
   private
 
   def set_package
-    @package = Spree::Taxonomy.find_by(name: params[:package_name].capitalize)
+    @package = Spree::Taxonomy.find_by(name: params[:package_name].split.map(&:capitalize).join(' '))
   end
 
   def set_order
