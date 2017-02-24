@@ -2,37 +2,41 @@
 
 <main class="container-fluid homepage-section <%= controller_name %> <%= action_name %>">
   <section class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="row">
-        <div class="col-md-4 text-center">
-          <h3>Laptop</h3>
-          <div class="package-icon-container"><%= image_tag "laptop.png", class: "package-icon" %></div>
-          <p class="text-left category-desctiption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus placeat, eos optio. Adipisci tempora possimus in quisquam ex debitis voluptatibus, minus architecto quas eligendi, dolore provident incidunt? Ratione, recusandae facilis?</p>
-          <br>
-          <%= link_to "Select", category_path(category: "laptop"), class: "btn btn-primary" %>
-        </div>
-        <div class="col-md-4 text-center">
-          <h3>Desktop</h3>
-          <div class="package-icon-container"><%= image_tag "desktop.png", class: "package-icon" %></div>
-          <p class="text-left category-desctiption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error sequi quo beatae enim pariatur magnam nobis voluptas. Voluptas cupiditate blanditiis molestiae optio fugit amet, officiis tenetur quasi inventore debitis.</p>
-          <br>
-          <%= link_to "Select", category_path(category: "desktop"), class: "btn btn-primary" %>
-        </div>
-        <div class="col-md-4 text-center">
-          <h3>Workstation</h3>
-          <div class="package-icon-container"><%= image_tag "workstation.png", class: "package-icon" %></div>
-          <p class="text-left category-desctiption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur atque temporibus doloremque eaque dolore delectus fugit, veniam autem suscipit deleniti ducimus eum, officia ipsam explicabo? Pariatur mollitia, sint alias deserunt.</p>
-          <br>
-          <%= link_to "Select", category_path(category: "workstation"), class: "btn btn-primary" %>
-        </div>
-      </div>
-    </div>
+    <div class="col-md-2"></div>
 
-    <div class="col-md-2">
+    <div class="col-md-2 col-md-push-8 text-center">
       <a class="promotion" href="#">
         <%= image_tag "promotion.png", class: "fa-pulse promotion-badge" %>
         <h5 class="promotion-text text-center">SPECIAL DEAL!</h5>
       </a>
+    </div>
+
+    <div class="col-md-8 col-md-pull-2">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h3>Laptop</h3>
+          <div class="package-icon-container"><%= image_tag "laptop.png", class: "package-icon" %></div>
+          <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus placeat, eos optio. Adipisci tempora possimus in quisquam ex debitis voluptatibus, minus architecto quas eligendi, dolore provident incidunt? Ratione, recusandae facilis?</p>
+          <br>
+          <%= link_to "Select", category_path(category: "laptop"), class: "btn btn-primary" %>
+        </div>
+        <hr class="hidden-md hidden-lg">
+        <div class="col-md-4 text-center">
+          <h3>Desktop</h3>
+          <div class="package-icon-container"><%= image_tag "desktop.png", class: "package-icon" %></div>
+          <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error sequi quo beatae enim pariatur magnam nobis voluptas. Voluptas cupiditate blanditiis molestiae optio fugit amet, officiis tenetur quasi inventore debitis.</p>
+          <br>
+          <%= link_to "Select", category_path(category: "desktop"), class: "btn btn-primary" %>
+        </div>
+        <hr class="hidden-md hidden-lg">
+        <div class="col-md-4 text-center">
+          <h3>Workstation</h3>
+          <div class="package-icon-container"><%= image_tag "workstation.png", class: "package-icon" %></div>
+          <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur atque temporibus doloremque eaque dolore delectus fugit, veniam autem suscipit deleniti ducimus eum, officia ipsam explicabo? Pariatur mollitia, sint alias deserunt.</p>
+          <br>
+          <%= link_to "Select", category_path(category: "workstation"), class: "btn btn-primary" %>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -53,6 +57,7 @@
           <p class="col-xs-10">shop-it@shopit.com</p>
         </div>
       </div>
+      <br class="hidden-md hidden-lg">
       <div class="col-md-4 col-md-offset-4 footer-social">
         <h5>Social</h5>
         <br>
