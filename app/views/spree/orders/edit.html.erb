@@ -30,7 +30,7 @@
                 </div>
               </div>
 
-              <div class='col-md-3'>
+              <div class='col-md-3'  data-hook='coupon_code'>
                 <%= order_form.text_field :coupon_code, size: '30', class: 'form-control', placeholder: 'Coupon code' %>
                 <br>
                 <%= button_tag Spree.t(:coupon_code_apply), class: 'btn btn-default' %>
