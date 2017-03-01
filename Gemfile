@@ -62,8 +62,6 @@ end
 group :development, :production, :staging do
   # capistrano
   gem "capistrano", "~> 3.7"
-
-  gem 'capistrano',         require: false
   gem 'capistrano-rvm',     require: false
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
