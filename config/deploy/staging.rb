@@ -10,6 +10,7 @@ set :rails_env, :production
 set :deploy_to, '/home/shop-it/staging'
 
 set :branch, 'staging'
+set :puma_bind, 'tcp://0.0.0.0:9294'
 
 set :ssh_options, {
     forward_agent: true,
