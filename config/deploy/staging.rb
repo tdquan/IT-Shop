@@ -6,7 +6,7 @@ role :db,  %w{shop-it@95.85.20.211}
 set :application, "shop-it"
 set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
 
-set :rails_env, :staging
+set :rails_env, :production
 set :deploy_to, '/home/shop-it/staging'
 
 set :branch, 'staging'
