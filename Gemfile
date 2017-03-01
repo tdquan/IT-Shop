@@ -59,7 +59,7 @@ group :development do
   gem 'better_errors'
 end
 
-group :development, :production, :staging do
+group :development, :production do
   # capistrano
   gem "capistrano", "~> 3.7"
   gem 'capistrano-rvm',     require: false
