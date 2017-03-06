@@ -6,7 +6,7 @@ timeout 30
 
 working_directory app_path
 
-listen app_path + '/tmp/unicorn.socket', backlog: 64
+listen "127.0.0.1:3000"
 pid "#{cap_path}/shared/pids/unicorn.pid"
 
 stderr_path "#{cap_path}/shared/log/unicorn.stderr.log"
