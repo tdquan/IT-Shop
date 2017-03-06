@@ -10,6 +10,12 @@
     <div id="new-customer" class="panel-body" data-hook="login">
       <%= form_for resource, :as => :spree_user, :url => spree.registration_path do |f| %>
         <div data-hook="signup_inside_form">
+          <div class="form-group">
+            <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
+          </div>
+          <div class="form-group">
+            <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
+          </div>
           <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
           <p><%= f.submit Spree.t(:create), :class => 'btn btn-success btn-block' %></p>
         </div>

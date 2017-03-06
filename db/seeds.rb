@@ -83,33 +83,33 @@ premium_workstation_monitor = Spree::Taxon.create!(taxonomy_id: premium_workstat
 
 ## basic laptop
 # default computer
-a = Spree::Product.create!(name: 'Dell Computer', price: 1000, shipping_category_id: 1, meta_keywords: 'basic_laptop_default standard_laptop_default premium_laptop_default basic_destop_default standard_desktop_default premium_desktop_default basic_workstation_default standard_workstation_default premium_workstation_default')
+a = Spree::Product.create!(name: 'Dell Computer', price: 1000, shipping_category_id: 1, meta_keywords: 'basic_laptop_default standard_laptop_default premium_laptop_default basic_desktop_default standard_desktop_default premium_desktop_default basic_workstation_default standard_workstation_default premium_workstation_default', available_on: Time.now)
 a.taxons = [basic_laptop_computer, standard_laptop_computer, premium_laptop_computer, basic_desktop_computer, standard_desktop_computer, premium_desktop_computer, basic_workstation_computer, standard_workstation_computer, premium_workstation_computer]
 # others
-b = Spree::Product.create!(name: 'Apple Computer', price: 2000, shipping_category_id: 1)
+b = Spree::Product.create!(name: 'Apple Computer', price: 2000, shipping_category_id: 1, meta_keywords: "", available_on: Time.now)
 b.taxons = [basic_laptop_computer, standard_laptop_computer, premium_laptop_computer, basic_desktop_computer, standard_desktop_computer, premium_desktop_computer, basic_workstation_computer, standard_workstation_computer, premium_workstation_computer]
 # default mouse
-c = Spree::Product.create!(name: 'HP Mouse', price: 20, shipping_category_id: 1, meta_keywords: 'basic_laptop_default standard_laptop_default premium_laptop_default basic_destop_default standard_desktop_default premium_desktop_default basic_workstation_default standard_workstation_default premium_workstation_default')
+c = Spree::Product.create!(name: 'HP Mouse', price: 20, shipping_category_id: 1, meta_keywords: 'basic_laptop_default standard_laptop_default premium_laptop_default basic_desktop_default standard_desktop_default premium_desktop_default basic_workstation_default standard_workstation_default premium_workstation_default', available_on: Time.now)
 c.taxons = [basic_laptop_mouse, standard_laptop_mouse, premium_laptop_mouse, basic_desktop_mouse, standard_desktop_mouse, premium_desktop_mouse, basic_workstation_mouse, standard_workstation_mouse, premium_workstation_mouse]
 # default keyboard
-d = Spree::Product.create!(name: 'Qwerty Keyboard', price: 49, shipping_category_id: 1, meta_keywords: 'basic_laptop_default standard_laptop_default premium_laptop_default basic_destop_default standard_desktop_default premium_desktop_default basic_workstation_default standard_workstation_default premium_workstation_default')
+d = Spree::Product.create!(name: 'Qwerty Keyboard', price: 49, shipping_category_id: 1, meta_keywords: 'basic_laptop_default standard_laptop_default premium_laptop_default basic_desktop_default standard_desktop_default premium_desktop_default basic_workstation_default standard_workstation_default premium_workstation_default', available_on: Time.now)
 d.taxons = [basic_laptop_keyboard, standard_laptop_keyboard, premium_laptop_keyboard, basic_desktop_keyboard, standard_desktop_keyboard, premium_desktop_keyboard, basic_workstation_keyboard, standard_workstation_keyboard, premium_workstation_keyboard]
 # others
-e = Spree::Product.create!(name: 'Azerty Keyboard', price: 49, shipping_category_id: 1)
+e = Spree::Product.create!(name: 'Azerty Keyboard', price: 49, shipping_category_id: 1, meta_keywords: "", available_on: Time.now)
 e.taxons = [basic_laptop_keyboard, standard_laptop_keyboard, premium_laptop_keyboard, basic_desktop_keyboard, standard_desktop_keyboard, premium_desktop_keyboard, basic_workstation_keyboard, standard_workstation_keyboard, premium_workstation_keyboard]
 # confirmation
 puts 'basic laptop created'
 
 ## standard laptop
 # default software
-f = Spree::Product.create!(name: 'Microsoft Office', price: 199, shipping_category_id: 1, meta_keywords: 'standard_laptop_default premium_laptop_default standard_desktop_default premium_desktop_default standard_workstation_default premium_workstation_default')
+f = Spree::Product.create!(name: 'Microsoft Office', price: 199, shipping_category_id: 1, meta_keywords: 'standard_laptop_default premium_laptop_default standard_desktop_default premium_desktop_default standard_workstation_default premium_workstation_default', available_on: Time.now)
 f.taxons = [standard_laptop_software, premium_laptop_software, standard_desktop_software, premium_desktop_software, standard_workstation_software, premium_workstation_software]
 # confirmation
 puts 'standard laptop created'
 
 ## premium laptop
 # default software
-g = Spree::Product.create!(name: 'HP Monitor', price: 299, shipping_category_id: 1, meta_keywords: 'premium_laptop_default premium_desktop_default premium_workstation_default')
+g = Spree::Product.create!(name: 'HP Monitor', price: 299, shipping_category_id: 1, meta_keywords: 'premium_laptop_default premium_desktop_default premium_workstation_default', available_on: Time.now)
 g.taxons = [premium_laptop_monitor, premium_desktop_monitor, premium_workstation_monitor]
 # confirmation
 puts 'premium laptop created'
