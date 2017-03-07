@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module ShopIt
   class Application < Rails::Application
-    
+
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -26,3 +26,5 @@ module ShopIt
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+config.assets.initialize_on_precompile = false
