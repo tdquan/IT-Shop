@@ -6,7 +6,6 @@ timeout 30
 
 working_directory app_path
 
-listen "127.0.0.1:3000"
 pid "#{cap_path}/shared/pids/unicorn.pid"
 
 listen "#{cap_path}/shared/sockets/unicorn.socket", :backlog => 64
