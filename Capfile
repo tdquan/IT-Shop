@@ -17,7 +17,7 @@ require "capistrano/scm/git"
 require "capistrano/rails"
 require "capistrano/bundler"
 require "capistrano/rvm"
-require "capistrano/puma"
+require "capistrano/unicorn"
 
 install_plugin Capistrano::SCM::Git
 
