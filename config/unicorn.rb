@@ -9,7 +9,6 @@ timeout 30
 
 # set path to application
 app_path = File.expand_path(File.dirname(__FILE__) + '/..')
-shared_dir = "/home/shop-it/staging/shared"
 working_directory app_path
 
 
@@ -19,7 +18,7 @@ preload_app true
 timeout 300
 
 # Set up socket location
-listen app_path + '/tmp/unicorn.sock', backlog: 64
+listen app_path + '/run/unicorn.sock', backlog: 64
 listen(3000, backlog: 64) if ENV['RAILS_ENV'] == 'development'
 
 # Logging
@@ -27,7 +26,7 @@ stderr_path app_path + '/log/unicorn.log'
 stdout_path app_path + '/log/unicorn.log'
 
 # Set master PID location
-pid app_path + '/tmp/unicorn.pid'
+pid app_path + '/run/unicorn.pid'
 
 # Garbage collection settings.
 GC.respond_to?(:copy_on_write_friendly=) &&

@@ -15,6 +15,7 @@ gem 'sqlite3'
 # Use Unicorn as the app server
 gem 'unicorn'
 gem 'unicorn-rails'
+gem 'listen', '~> 3.0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -53,7 +54,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -68,7 +69,7 @@ group :development, :production do
   gem 'capistrano-rvm',     require: false
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
+  gem 'capistrano3-unicorn',   require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
