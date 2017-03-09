@@ -1,3 +1,4 @@
+
 cap_path = "/home/shop-it/staging"
 app_path = "#{cap_path}/current"
 
@@ -41,4 +42,5 @@ end
 after_fork do |server, worker|
   # needed if preload_app
   ActiveRecord::Base.establish_connection if defined?(ActiveRecord::Base)
+
 end

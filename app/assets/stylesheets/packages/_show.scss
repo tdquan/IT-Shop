@@ -1,0 +1,45 @@
+.show-package{
+  h3{
+    color: $blue;
+  }
+  .fa-star{
+    color: $yellow;
+  }
+  .zoom-details{
+    p{
+      font-size: 12px;
+      margin: 2px 0;
+    }
+  }
+  .details-small-size{
+    font-size: 13px;
+  }
+  .btn{
+    width:100%;
+    max-width: 160px;
+  }
+  .price-card{
+    border: solid 1px #E9E9E9;
+    padding: 20px 20px;
+    margin-top: 40px;
+  }
+  .first-card{
+    margin-top: 30px;
+  }
+  .product-price{
+    color: red;
+    font-size: 13px;
+  }
+  .custom-options{
+    font-size: 14px;
+  }
+  .customize-card{
+    margin-bottom: -20px;
+  }
+}
+
+.customized-package-quantity-input {
+  width: 30%;
+  height: 2em;
+  margin-bottom: 1em;
+}

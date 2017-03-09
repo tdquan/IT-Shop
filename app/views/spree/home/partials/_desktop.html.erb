@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <h1 class="text-center">Choose your package</h1>
+
+  <section class="package-selection homepage-section row">
+     <div class="col-md-8 col-md-offset-2">
+      <ul class="nav nav-pills nav-justified">
+        <li class="active package-overview-container">
+          <a data-toggle="pill" href="#basic-desktop-package" class="package-overview-select clearfix">
+            <h4><%= @basic.name %></h4>
+            <div class="text-center package-icon-container"><%= image_tag "coffee.png", alt: "Basic Pakage image", class: "package-icon" %></div>
+            <ul class="package-overview-details text-left">
+              <li>Dell Computer</li>
+              <li>Keyboard</li>
+              <li>HP Mouse</li>
+            </ul>
+            <hr>
+            <b class="package-price float-right">2,058 €</b>
+          </a>
+        </li>
+        <li class="package-overview-container">
+          <a data-toggle="pill" href="#standard-desktop-package" class="package-overview-select clearfix">
+            <h4><%= @standard.name %></h4>
+            <div class="text-center package-icon-container"><%= image_tag "cloud.png", alt: "Standard Pakage image", class: "package-icon" %></div>
+            <ul class="package-overview-details text-left">
+              <li>Dell Computer or Apple Computer</li>
+              <li>Keyboard</li>
+              <li>HP Mouse</li>
+              <li>Microsoft Office</li>
+            </ul>
+            <hr>
+            <b class="package-price float-right">2,137 €</b>
+          </a>
+        </li>
+        <li class="package-overview-container">
+          <a data-toggle="pill" href="#premium-desktop-package" class="package-overview-select clearfix">
+            <h4><%= @premium.name %></h4>
+            <div class="text-center package-icon-container"><%= image_tag "desktop.png", alt: "Premium Pakage image", class: "package-icon" %></div>
+            <ul class="package-overview-details text-left">
+              <li>Dell Computer or Apple Computer</li>
+              <li>Keyboard</li>
+              <li>HP Mouse</li>
+              <li>Microsoft Office</li>
+              <li>External Monitor</li>
+            </ul>
+            <hr>
+            <b class="package-price float-right">2,436 €</b>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="package-details row">
+    <div class="tab-content col-md-8 col-md-offset-2">
+      <div id="basic-desktop-package" class="tab-pane fade in active">
+        <div><%= render "spree/home/partials/basic_desktop" %></div>
+      </div>
+      <div id="standard-desktop-package" class="tab-pane fade">
+        <div><%= render "spree/home/partials/standard_desktop" %></div>
+      </div>
+      <div id="premium-desktop-package" class="tab-pane fade">
+        <div><%= render "spree/home/partials/premium_desktop" %></div>
+      </div>
+    </div>
+  </section>
+</div>

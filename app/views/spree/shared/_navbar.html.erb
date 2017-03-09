@@ -1,0 +1,49 @@
+<nav class="navbar row">
+  <div class="col-md-8 col-md-offset-2">
+    <!-- LOGO -->
+
+    <div class="logo-group">
+      <%= link_to root_path do %>
+        <div class="navbar_logo">
+          <%= image_tag "logo.png", alt: "logo image" %>
+        </div>
+      <% end %>
+    </div>
+
+
+    <!-- LOGIN/LOGOUT -->
+
+    <div class="account-group float-right">
+      <div class="dropdown">
+        <a class="avatar-dropdown dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="avatar-round">
+            <%= image_tag "avatar.png" %>
+          </div>
+          <p class="avatar-name">User</p>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="dropdownMenuLink">
+          <% if spree_user_signed_in? %>
+            <%= link_to Spree.t(:my_account), spree.account_path, class: "dropdown-item" %>
+            <%= link_to Spree.t(:logout), spree.logout_path, class: "dropdown-item" %>
+          <% else %>
+            <%= link_to Spree.t(:login), spree.login_path, class: "dropdown-item" %>
+            <%= link_to Spree.t(:signup), spree.signup_path, class: "dropdown-item" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOPPING CART -->
+    <% if spree_user_signed_in? %>
+      <div class="cart-group float-right">
+        <%= link_to cart_path do %>
+          <% unless spree_current_user.orders.empty? %>
+            <div class="inline-block"><i class="fa fa-shopping-cart fa-lg"></i></div>
+            <div class="inline-block shopping-cart-count"><span><%= @order.quantity %></span></div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</nav>

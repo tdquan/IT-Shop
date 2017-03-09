@@ -1,0 +1,135 @@
+.navbar {
+  // position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+  border: none;
+  border-radius: 0;
+  background: $dark-gray;
+  background: rgba(0,0,0,0.8);
+  font-size: 17px;
+  color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.logo-group {
+  float: left;
+  margin-left: 30px;
+  height: 48px;
+  max-width: 200px;
+  overflow: hidden;
+  .navbar_logo {
+    height: 48px;
+    img {
+      height: 100%;
+      width: auto;
+      padding: 10px 0;
+    }
+  }
+}
+
+.account-group {
+  float: right;
+  height: 48px;
+  .avatar-dropdown {
+    display: inline-block;
+    height: 100%;
+    &:hover, &:visited, &:focus {
+      text-decoration: none;
+      color: inherit;
+    }
+    .avatar-name {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0;
+      font-size: 12px;
+      font-weight: lighter;
+      color: #fff;
+    }
+  }
+  &:hover {
+    background-color: #444;
+    background-color: linear-gradient(#222,#444);
+  }
+}
+
+.avatar-round {
+  display: inline-block;
+  padding: 5px;
+  width: auto;
+  height: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-right: 5px;
+  img {
+    border: 1px solid #fff;
+    border-radius: 100%;
+    height: 100%;
+    width: auto;
+  }
+}
+
+.dropdown {
+  margin-right: 15px;
+  height: 100%;
+}
+
+.dropdown-menu {
+  text-align: center;
+  padding: 0;
+  background-color: $dark-gray;
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 3px;
+  a.dropdown-item {
+    line-height: 2.5em;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    &:hover {
+      background-color: #444;
+      background-color: linear-gradient(#222,#444);
+      text-decoration: none;
+    }
+  }
+}
+
+.cart-group {
+  height: 48px;
+  line-height: 48px;
+  vertical-align: middle;
+  padding: 0 10px;
+  a {
+    color: #fff;
+    .fa {
+      margin-right: 5px;
+    }
+    .shopping-cart-count {
+      font-size: 14px;
+      background-color: $orange;
+      border-radius: 50%;
+      width: 25px;
+      color: #fff;
+      span {
+        line-height: 25px;
+        text-align: center;
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+  &:hover {
+    background-color: #444;
+    background-color: linear-gradient(#222,#444);
+  }
+}

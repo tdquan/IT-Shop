@@ -16,3 +16,7 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+Spree::PermittedAttributes.user_attributes.push :first_name, :last_name
+
+# Change to true if you want to send confirmation email
+Spree::Auth::Config[:confirmable] = false

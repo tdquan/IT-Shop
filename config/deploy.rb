@@ -8,7 +8,7 @@ set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+# set :deploy_to, "/home/shop-it/staging"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -31,3 +31,69 @@ set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+# set :puma_threads,    [4, 16]
+# set :puma_workers,    0
+
+# # Don't change these unless you know what you're doing
+# set :pty,             true
+# set :use_sudo,        false
+# set :stage,           :production
+# set :deploy_via,      :remote_cache
+# set :puma_bind,       "unix:///home/tmp/sockets/#{fetch(:application)}-puma.sock"
+# set :puma_state,      "/home/tmp/pids/puma.state"
+# set :puma_pid,        "/home/tmp/pids/puma.pid"
+# set :puma_access_log, "#{release_path}/log/puma.error.log"
+# set :puma_error_log,  "#{release_path}/log/puma.access.log"
+# set :puma_preload_app, true
+# set :puma_worker_timeout, nil
+# set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+
+# # Linked Files & Directories (Default None):
+# # set :linked_files, %w{config/database.yml}
+# set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
+# namespace :puma do
+#   desc 'Create Directories for Puma Pids and Socket'
+#   task :make_dirs do
+#     on roles(:app) do
+#       execute "mkdir /home/tmp/sockets -p"
+#       execute "mkdir /home/tmp/pids -p"
+#     end
+#   end
+
+#   before :start, :make_dirs
+# end
+
+# namespace :deploy do
+#   desc "Make sure local git is in sync with remote."
+#   task :check_revision do
+#     on roles(:app) do
+#       unless `git rev-parse HEAD` == `git rev-parse origin/staging` #This is just for staging
+#         puts "WARNING: HEAD is not the same as origin/staging"
+#         puts "Run `git push` to sync changes."
+#         exit
+#       end
+#     end
+#   end
+
+#   desc 'Initial Deploy'
+#   task :initial do
+#     on roles(:app) do
+#       before 'deploy:restart', 'puma:start'
+#       invoke 'deploy'
+#     end
+#   end
+
+#   desc 'Restart application'
+#   task :restart do
+#     on roles(:app), in: :sequence, wait: 5 do
+#       invoke 'puma:restart'
+#     end
+#   end
+
+#   before :starting,     :check_revision
+#   after  :finishing,    :compile_assets
+#   after  :finishing,    :cleanup
+#   after  :finishing,    :restart
+# end

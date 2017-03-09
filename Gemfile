@@ -11,7 +11,11 @@ gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+# gem 'puma', '~> 3.0'
+# Use Unicorn as the app server
+gem 'unicorn'
+gem 'unicorn-rails'
+gem 'listen', '~> 3.0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'jquery-turbolinks'
+
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
@@ -49,18 +55,32 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
+<<<<<<< HEAD
   # capistrano
   gem "capistrano", "~> 3.7"
   gem 'capistrano3-unicorn'
+=======
+>>>>>>> f88c5a10c2e122665001dd0c2bc5cde494031ba3
   gem 'binding_of_caller'
   gem 'better_errors'
 end
 
+<<<<<<< HEAD
+=======
+group :development, :production do
+  # capistrano
+  gem "capistrano", "~> 3.7"
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-unicorn',   require: false
+end
+>>>>>>> f88c5a10c2e122665001dd0c2bc5cde494031ba3
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
