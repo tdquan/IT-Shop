@@ -14,7 +14,7 @@ gem 'sqlite3'
 # gem 'puma', '~> 3.0'
 # Use Unicorn as the app server
 gem 'unicorn'
-gem 'unicorn-rails'
+# gem 'unicorn-rails'
 gem 'listen', '~> 3.0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

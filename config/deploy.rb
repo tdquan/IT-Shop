@@ -5,7 +5,7 @@ set :application, "shop-it"
 set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
 
 set :rbenv_type, :user # or :system, depends on your rbenv setup
-set :rbenv_ruby, '2.0.0-p247'
+set :rbenv_ruby, '2.4.0'
 
 # in case you want to set ruby version from the file:
 # set :rbenv_ruby, File.read('.ruby-version').strip
