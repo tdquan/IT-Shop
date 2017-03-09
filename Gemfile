@@ -24,7 +24,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'unicorn'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -60,27 +60,23 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-<<<<<<< HEAD
   # capistrano
-  gem "capistrano", "~> 3.7"
-  gem 'capistrano3-unicorn'
-=======
->>>>>>> f88c5a10c2e122665001dd0c2bc5cde494031ba3
+
+
   gem 'binding_of_caller'
   gem 'better_errors'
 end
 
-<<<<<<< HEAD
-=======
+
 group :development, :production do
   # capistrano
   gem "capistrano", "~> 3.7"
-  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rbenv', '~> 2.0'
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-unicorn',   require: false
 end
->>>>>>> f88c5a10c2e122665001dd0c2bc5cde494031ba3
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

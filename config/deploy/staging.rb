@@ -1,7 +1,7 @@
 
-role :app, %w{shop-it@95.85.20.211}
-role :web, %w{shop-it@95.85.20.211}
-role :db,  %w{shop-it@95.85.20.211}
+role :app, %w{shop-it@188.226.135.92}
+role :web, %w{shop-it@188.226.135.92}
+role :db,  %w{shop-it@188.226.135.92}
 
 set :application, "shop-it"
 set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"

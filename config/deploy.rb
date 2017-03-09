@@ -4,6 +4,10 @@ lock "3.7.2"
 set :application, "shop-it"
 set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
 
+# set :rbenv_ruby, File.read('.ruby-version').strip
+
+
+# default value
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

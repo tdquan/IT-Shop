@@ -16,7 +16,7 @@ require "capistrano/scm/git"
 # Load DSL and Setup Up Stages
 require "capistrano/rails"
 require "capistrano/bundler"
-require "capistrano/rvm"
+# require "capistrano/rbenv"
 # require "capistrano/unicorn"
 
 install_plugin Capistrano::SCM::Git
