@@ -10,6 +10,8 @@ working_directory app_path
 pid "#{cap_path}/shared/pids/unicorn.pid"
 
 listen "#{cap_path}/shared/sockets/unicorn.socket", :backlog => 64
+
+stderr_path "#{cap_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{cap_path}/shared/log/unicorn.stdout.log"
 
 before_exec do |server|
