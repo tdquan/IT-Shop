@@ -7,21 +7,21 @@ default: &default
 development:
   adapter: sqlite3
   encoding: utf8
-  database: /db/development
+  database: db/development
   pool: 5
 
 test: &TEST
-  adapter: postgresql
+  adapter: sqlite3
   encoding: utf8
-  database: /db/test
+  database: db/test
   pool: 5
-  username:
-  password:
+  # username:
+  # password:
 
 production:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: utf8
-  database: /db/shop-it
+  database: db/shop-it
   pool: 5
-  username: shop-it
-  password: <%= ENV['SHOP-IT_DATABASE_PASSWORD'] %>
+  # username: shop-it
+  # password: <%= ENV['SHOP-IT_DATABASE_PASSWORD'] %>
