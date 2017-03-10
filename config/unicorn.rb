@@ -7,12 +7,12 @@ timeout 30
 
 working_directory app_path
 
-pid "#{cap_path}/shared/pids/unicorn.pid"
+pid "#{app_path}/shared/pids/unicorn.pid"
 
-listen "#{cap_path}/shared/sockets/unicorn.socket", :backlog => 64
+listen "#{app_path}/shared/sockets/unicorn.socket", :backlog => 64
 
-stderr_path "#{cap_path}/shared/log/unicorn.stderr.log"
-stdout_path "#{cap_path}/shared/log/unicorn.stdout.log"
+stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
+stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
 before_exec do |server|
   ENV['BUNDLE_GEMFILE'] = "#{app_path}/Gemfile"
