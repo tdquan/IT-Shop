@@ -2,7 +2,7 @@
 cap_path = "/home/shop-it/staging"
 app_path = "#{cap_path}/current"
 
-worker_processes 4
+worker_processes 2
 timeout 30
 
 working_directory app_path
