@@ -23,5 +23,5 @@ production:
   encoding: utf8
   database: db/shop-it
   pool: 5
-  # username: shop-it
-  # password: <%= ENV['SHOP-IT_DATABASE_PASSWORD'] %>
+  username: shop-it
+  password: <%= ENV['SHOP-IT_DATABASE_PASSWORD'] %>
