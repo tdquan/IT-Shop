@@ -1,5 +1,5 @@
 class Spree::HomeController < ApplicationController
-  before_action :set_order
+  before_action :set_user, :set_order
 
   def index
     @taxonomies = Spree::Taxonomy.includes(root: :children)
@@ -23,15 +23,6 @@ class Spree::HomeController < ApplicationController
     @basic = Spree::Taxonomy.all[n]
     @standard = Spree::Taxonomy.all[n+1]
     @premium = Spree::Taxonomy.all[n+2]
-  end
-
-
-  def set_order
-    if !current_spree_user.orders.incomplete.order('created_at DESC').first.nil?
-      @order = current_spree_user.orders.incomplete.order('created_at DESC').first
-    else
-      @order = current_spree_user.orders.new
-    end
   end
 
 end

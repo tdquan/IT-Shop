@@ -1,5 +1,5 @@
 class Spree::PackagesController < Spree::StoreController
-  before_action :set_package, :set_order
+  before_action :set_user, :set_package, :set_order
 
   def show
   end
@@ -58,14 +58,6 @@ class Spree::PackagesController < Spree::StoreController
 
   def set_package
     @package = Spree::Taxonomy.find_by(name: params[:package_name].split.map(&:capitalize).join(' '))
-  end
-
-  def set_order
-    if !current_spree_user.orders.incomplete.order('created_at DESC').first.nil?
-      @order = current_spree_user.orders.incomplete.order('created_at DESC').first
-    else
-      @order = current_spree_user.orders.new
-    end
   end
 
   # def order_params
