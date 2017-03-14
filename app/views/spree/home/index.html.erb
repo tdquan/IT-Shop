@@ -2,16 +2,15 @@
 
 <main class="container-fluid homepage-section <%= controller_name %> <%= action_name %>">
   <section class="row">
-    <div class="col-md-2"></div>
 
-    <div class="col-md-2 col-md-push-8 text-center">
+    <div class="col-md-2 text-center">
       <a class="promotion" href="#">
-        <%= image_tag "promotion.png", class: "fa-pulse promotion-badge" %>
-        <h5 class="promotion-text text-center">SPECIAL DEAL!</h5>
+<!--         <%= image_tag "promotion.png", class: "fa-pulse promotion-badge" %>
+ -->        <h5 class="promotion-text text-center">SPECIAL DEAL!</h5>
       </a>
     </div>
 
-    <div class="col-md-8 col-md-pull-2">
+    <div class="col-md-8">
       <div class="row">
         <div class="col-md-4 text-center">
           <h3>Laptop</h3>
@@ -26,7 +25,7 @@
           <div class="package-icon-container"><%= image_tag "desktop.png", class: "package-icon" %></div>
           <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error sequi quo beatae enim pariatur magnam nobis voluptas. Voluptas cupiditate blanditiis molestiae optio fugit amet, officiis tenetur quasi inventore debitis.</p>
           <br>
-          <%= link_to "Select", category_path(category: "desktop"), class: "btn btn-primary" %>
+          <%= link_to "Select", category_path(category: "desktop"), class: "btn btn-success" %>
         </div>
         <hr class="hidden-md hidden-lg">
         <div class="col-md-4 text-center">
@@ -34,7 +33,7 @@
           <div class="package-icon-container"><%= image_tag "workstation.png", class: "package-icon" %></div>
           <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur atque temporibus doloremque eaque dolore delectus fugit, veniam autem suscipit deleniti ducimus eum, officia ipsam explicabo? Pariatur mollitia, sint alias deserunt.</p>
           <br>
-          <%= link_to "Select", category_path(category: "workstation"), class: "btn btn-primary" %>
+          <%= link_to "Select", category_path(category: "workstation"), class: "btn btn-info" %>
         </div>
       </div>
     </div>
@@ -49,7 +48,7 @@
         <br>
         <div class="row">
           <i class="fa fa-map-marker fa-lg col-xs-1 footer-contact-icon"></i>
-          <p class="col-xs-10">119 Boulevard de Strasbourg, Paris 75003</p>
+          <p class="col-xs-10">119 Boulevard de Strasbourg, Paris 75002</p>
         </div>
         <br>
         <div class="row">
@@ -73,10 +72,6 @@
           <a class="fa fa-stack footer-social-icon" href="#">
             <i class="fa fa-circle fa-stack-2x google-bg"></i>
             <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-          </a>
-          <a class="fa fa-stack footer-social-icon" href="#">
-            <i class="fa fa-circle fa-stack-2x pinterest-bg"></i>
-            <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
           </a>
         </ul>
       </div>
