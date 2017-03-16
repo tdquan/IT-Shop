@@ -1,0 +1,44 @@
+.package-overview-container {
+  padding: 0 20px;
+  .package-overview-select {
+    padding: 20px;
+    transition: background ease 0.3s;
+    .package-overview-details {
+      margin-left: 15px;
+    }
+  }
+  ul {
+    font-size: 14px;
+    color: #555;
+  }
+  .package-price {
+    font-size: 1.2em;
+  }
+}
+.package-overview-container.active {
+  a {
+    background: none !important;
+  }
+}
+.container-laptop.active{
+  a{
+    border: 1px solid $blue-only;
+  }
+}
+.container-desktop.active{
+  a{
+    border: 1px solid $blue-green;
+  }
+}
+.container-workstation.active{
+  a{
+    border: 1px solid $green-only;
+  }
+}
+.package-icon-container {
+  padding: 25px;
+  .package-icon {
+    width: 100px;
+    height: auto;
+  }
+}

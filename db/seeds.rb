@@ -8,14 +8,14 @@ Spree::Product.delete_all
 ##### TAXONOMY & TAXONS #####
 
 ## basic laptop
-basic_laptop = Spree::Taxonomy.create!(name:'Basic Laptop')
+basic_laptop = Spree::Taxonomy.create!(name:'Basic')
 basic_laptop_taxon = Spree::Taxon.last
 basic_laptop_computer = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Computer')
 basic_laptop_mouse = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Mouse')
 basic_laptop_keyboard = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Keyboard')
 
 ## standard laptop
-standard_laptop = Spree::Taxonomy.create!(name:'Standard Laptop')
+standard_laptop = Spree::Taxonomy.create!(name:'Standard')
 standard_laptop_taxon = Spree::Taxon.last
 standard_laptop_computer = Spree::Taxon.create!(taxonomy_id: standard_laptop.id, parent_id: standard_laptop_taxon.id, name: 'Computer')
 standard_laptop_mouse = Spree::Taxon.create!(taxonomy_id: standard_laptop.id, parent_id: standard_laptop_taxon.id, name: 'Mouse')
@@ -23,7 +23,7 @@ standard_laptop_keyboard = Spree::Taxon.create!(taxonomy_id: standard_laptop.id,
 standard_laptop_software = Spree::Taxon.create!(taxonomy_id: standard_laptop.id, parent_id: standard_laptop_taxon.id, name: 'Software')
 
 ## premium laptop
-premium_laptop = Spree::Taxonomy.create!(name:'Premium Laptop')
+premium_laptop = Spree::Taxonomy.create!(name:'Premium')
 premium_laptop_taxon = Spree::Taxon.last
 premium_laptop_computer = Spree::Taxon.create!(taxonomy_id: premium_laptop.id, parent_id: premium_laptop_taxon.id, name: 'Computer')
 premium_laptop_mouse = Spree::Taxon.create!(taxonomy_id: premium_laptop.id, parent_id: premium_laptop_taxon.id, name: 'Mouse')
@@ -32,14 +32,14 @@ premium_laptop_software = Spree::Taxon.create!(taxonomy_id: premium_laptop.id, p
 premium_laptop_monitor = Spree::Taxon.create!(taxonomy_id: premium_laptop.id, parent_id: premium_laptop_taxon.id, name: 'Monitor')
 
 ## basic desktop
-basic_desktop = Spree::Taxonomy.create!(name:'Basic Desktop')
+basic_desktop = Spree::Taxonomy.create!(name:'Basic')
 basic_desktop_taxon = Spree::Taxon.last
 basic_desktop_computer = Spree::Taxon.create!(taxonomy_id: basic_desktop.id, parent_id: basic_desktop_taxon.id, name: 'Computer')
 basic_desktop_mouse = Spree::Taxon.create!(taxonomy_id: basic_desktop.id, parent_id: basic_desktop_taxon.id, name: 'Mouse')
 basic_desktop_keyboard = Spree::Taxon.create!(taxonomy_id: basic_desktop.id, parent_id: basic_desktop_taxon.id, name: 'Keyboard')
 
 ## standard desktop
-standard_desktop = Spree::Taxonomy.create!(name:'Standard Desktop')
+standard_desktop = Spree::Taxonomy.create!(name:'Standard')
 standard_desktop_taxon = Spree::Taxon.last
 standard_desktop_computer = Spree::Taxon.create!(taxonomy_id: standard_desktop.id, parent_id: standard_desktop_taxon.id, name: 'Computer')
 standard_desktop_mouse = Spree::Taxon.create!(taxonomy_id: standard_desktop.id, parent_id: standard_desktop_taxon.id, name: 'Mouse')
@@ -47,7 +47,7 @@ standard_desktop_keyboard = Spree::Taxon.create!(taxonomy_id: standard_desktop.i
 standard_desktop_software = Spree::Taxon.create!(taxonomy_id: standard_desktop.id, parent_id: standard_desktop_taxon.id, name: 'Software')
 
 ## premium desktop
-premium_desktop = Spree::Taxonomy.create!(name:'Premium Desktop')
+premium_desktop = Spree::Taxonomy.create!(name:'Premium')
 premium_desktop_taxon = Spree::Taxon.last
 premium_desktop_computer = Spree::Taxon.create!(taxonomy_id: premium_desktop.id, parent_id: premium_desktop_taxon.id, name: 'Computer')
 premium_desktop_mouse = Spree::Taxon.create!(taxonomy_id: premium_desktop.id, parent_id: premium_desktop_taxon.id, name: 'Mouse')
@@ -56,14 +56,14 @@ premium_desktop_software = Spree::Taxon.create!(taxonomy_id: premium_desktop.id,
 premium_desktop_monitor = Spree::Taxon.create!(taxonomy_id: premium_desktop.id, parent_id: premium_desktop_taxon.id, name: 'Monitor')
 
 ## basic workstation
-basic_workstation = Spree::Taxonomy.create!(name:'Basic Workstation')
+basic_workstation = Spree::Taxonomy.create!(name:'Basic')
 basic_workstation_taxon = Spree::Taxon.last
 basic_workstation_computer = Spree::Taxon.create!(taxonomy_id: basic_workstation.id, parent_id: basic_workstation_taxon.id, name: 'Computer')
 basic_workstation_mouse = Spree::Taxon.create!(taxonomy_id: basic_workstation.id, parent_id: basic_workstation_taxon.id, name: 'Mouse')
 basic_workstation_keyboard = Spree::Taxon.create!(taxonomy_id: basic_workstation.id, parent_id: basic_workstation_taxon.id, name: 'Keyboard')
 
 ## standard workstation
-standard_workstation = Spree::Taxonomy.create!(name:'Standard Workstation')
+standard_workstation = Spree::Taxonomy.create!(name:'Standard')
 standard_workstation_taxon = Spree::Taxon.last
 standard_workstation_computer = Spree::Taxon.create!(taxonomy_id: standard_workstation.id, parent_id: standard_workstation_taxon.id, name: 'Computer')
 standard_workstation_mouse = Spree::Taxon.create!(taxonomy_id: standard_workstation.id, parent_id: standard_workstation_taxon.id, name: 'Mouse')
@@ -71,7 +71,7 @@ standard_workstation_keyboard = Spree::Taxon.create!(taxonomy_id: standard_works
 standard_workstation_software = Spree::Taxon.create!(taxonomy_id: standard_workstation.id, parent_id: standard_workstation_taxon.id, name: 'Software')
 
 ## premium workstation
-premium_workstation = Spree::Taxonomy.create!(name:'Premium Workstation')
+premium_workstation = Spree::Taxonomy.create!(name:'Premium')
 premium_workstation_taxon = Spree::Taxon.last
 premium_workstation_computer = Spree::Taxon.create!(taxonomy_id: premium_workstation.id, parent_id: premium_workstation_taxon.id, name: 'Computer')
 premium_workstation_mouse = Spree::Taxon.create!(taxonomy_id: premium_workstation.id, parent_id: premium_workstation_taxon.id, name: 'Mouse')

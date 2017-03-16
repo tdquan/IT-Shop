@@ -1,43 +1,37 @@
-<div class="row">
-  <div class="col-md-2 col-md-offset-1 hidden-xs hidden-sm">
-    <div class="package-overview-details text-left">
-      <div class="row">
-        <i class="fa fa-phone fa-lg" aria-hidden="true"></i>
-        <h6>More Info:</h6>
-        <p>Call 06 06 06 06 06</p>
-      </div>
+<div class="row package-footer">
+  <div class="col-md-3 col-md-offset-1 hidden-xs hidden-sm">
+    <div class="package-overview-details shipping-details">
+      <ul class="list-inline">
+        <li class="text-center"><i class="fa fa-check" aria-hidden="true"></i></li>
+        <li><h6>in stock</h6></li>
+      </ul>
+      <ul class="list-inline">
+        <li><i class="fa fa-truck" aria-hidden="true"></i></li>
+        <li><h6>free shipping</h6></li>
+      </ul>
     </div>
   </div>
-  <div class="col-md-2 hidden-xs hidden-sm">
-    <div class="package-overview-details text-left">
-      <i class="fa fa-shopping-bag fa-lg" aria-hidden="true"></i>
-      <h6>Delivery:</h6>
-      <p>In Stock</p>
-      <p>Free Shipping</p>
-    </div>
-  </div>
-  <div class="col-md-2 hidden-xs hidden-sm">
-    <div class="package-overview-details text-left">
-      <div><i class="fa fa-euro fa-lg" aria-hidden="true"></i></div>
-      <h6><b class="package-price-details">2,058</b></h6>
+  <div class="col-md-2 hidden-xs hidden-sm text-center">
+    <div class="package-overview-details">
+      <b class="package-price-details">2,058 €</b>
     </div>
   </div>
   <div class="col-md-5">
+    <%= simple_form_for :package, html: { class: "text-center row add-package" }, url: add_package_path(@basic, category: params[:category], package_name: @basic.name.downcase) do |f| %>
+    <h6 class="text-center col-md-4">Quick add</h6>
+    <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "package-quantity-input", value: 1 }, wrapper_html: { class: "col-md-3" }, label: false %>
+    <div class="col-md-5 text-center">
+      <%= button_tag(type: 'submit', class: "btn btn-primary package-customize-btn add-cart") do %>
+        Add to cart
+      <% end %>
+    </div>
+  <% end %>
     <div class="package-customize-btn-grp text-center row">
       <div class="col-md-5 col-md-offset-7">
-        <%= link_to package_path(package_name: @basic.name.downcase), class: "btn btn-primary package-customize-btn" do %>
-          <i class="fa fa-edit"></i>&nbsp;&nbsp;Customize
+        <%= link_to package_path(package_name: @basic.name.downcase), class: "btn btn-danger package-customize-btn" do %>
+          Customize
         <% end %>
       </div>
     </div>
-    <%= simple_form_for :package, html: { class: "text-center row" }, url: add_package_path(@basic, category: params[:category], package_name: @basic.name.downcase) do |f| %>
-      <h6 class="text-center col-md-4">Quick add</h6>
-      <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "package-quantity-input", value: 1 }, wrapper_html: { class: "col-md-3" }, label: false %>
-      <div class="col-md-5 text-center">
-        <%= button_tag(type: 'submit', class: "btn btn-success package-customize-btn") do %>
-          <i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;Add to cart
-        <% end %>
-      </div>
-    <% end %>
   </div>
 </div>
