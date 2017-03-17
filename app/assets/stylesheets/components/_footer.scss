@@ -1,0 +1,39 @@
+.homepage-footer {
+  height: 80px;
+  padding: 26px 0;
+  background: $gray-primary;
+  border-top: 1px solid #d6d6d6;
+  color: white;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+}
+
+.social-icon{
+  font-size: 24px;
+}
+
+.footer-social-icon {
+  * {
+    transition: color ease 0.3s;
+  }
+  .fa {
+    color: $blue-primary;
+  }
+  &:hover {
+    .fa {
+      color: darken($blue-primary, 15%);
+    }
+  }
+}
+
+// .footer {
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   z-index: 999;
+//   display: block;
+//   margin: 0;
+//   width: 100%;
+// }

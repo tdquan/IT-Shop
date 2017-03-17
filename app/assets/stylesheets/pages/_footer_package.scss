@@ -50,21 +50,3 @@
 .add-package{
   padding-top: 22px;
 }
-
-.social-icon{
-  font-size: 24px;
-}
-
-.footer-social-icon {
-  * {
-    transition: color ease 0.3s;
-  }
-  .fa {
-    color: $blue-primary;
-  }
-  &:hover {
-    .fa {
-      color: darken($blue-primary, 15%);
-    }
-  }
-}

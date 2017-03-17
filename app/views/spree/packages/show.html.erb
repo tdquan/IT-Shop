@@ -1,135 +1,41 @@
 <%= render "spree/shared/navbar" %>
 
-<%= simple_form_for :package, html: { class: "col-md-8 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
-
-  <div class="show-package row">
-    <div class="col-md-4">
-      <h3><%= @package.name %></h3>
-      <% 5.times do  %>
-        <i class="fa fa-star" aria-hidden="true"></i>
-      <% end %>
-      <p>Available</p>
-      <i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
-      <div class="zoom-details">
-        <p>Click to zoom</p>
-      </div>
-      <br>
-      <div class="specs">
-        <p>Description:</p>
-        <p class="details-small-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-    </div>
-
-    <div class="col-md-5">
-      <h3>Customize your package</h3>
-
-      <div class="customize-card first-card">
-        <p>Which computer is right for you?</p>
-        <ul class="list-inline custom-options">
-          <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
-            <li><div class="radio">
-            <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
-              <label><input class="customPack" type="radio" name="package[computer]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
-            <% else %>
-              <label><input class="customPack" type="radio" name="package[computer]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
-            <% end %>
-              <div class="product-price"><%= product.price.floor %>€</div>
-            </div></li>
-          <% end %>
-        </ul>
-      </div>
-      <hr>
-      <div class="customize-card">
-        <p>Which keyboard is right for you?</p>
-        <ul class="list-inline custom-options">
-          <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
-            <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
-                <label><input class="" type="radio" name="package[keyboard]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% else %>
-                <label><input class="" type="radio" name="package[keyboard]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% end %>
-              <div class="product-price"><%= product.price.floor %>€</div>
-            </div></li>
-          <% end %>
-        </ul>
-      </div>
-      <hr>
-      <div class="customize-card">
-        <p>Which mouse is right for you?</p>
-        <ul class="list-inline custom-options">
-          <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
-            <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
-                <label><input class="" type="radio" name="package[mouse]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% else %>
-                <label><input class="" type="radio" name="package[mouse]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% end %>
-              <div class="product-price"><%= product.price.floor %>€</div>
-            </div></li>
-          <% end %>
-        </ul>
-      </div>
-      <% if @package.taxons.find_by name: 'Monitor' %>
-      <hr>
-      <div class="customize-card">
-        <p>Which monitor is right for you?</p>
-        <ul class="list-inline custom-options">
-          <% (@package.taxons.find_by name: 'Monitor').products.each do |product| %>
-            <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
-                <label><input class="" type="radio" name="package[monitor]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% else %>
-                <label><input class="" type="radio" name="package[monitor]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% end %>
-              <div class="product-price"><%= product.price.floor %>€</div>
-            </div></li>
-          <% end %>
-        </ul>
-      </div>
-      <% end %>
-      <% if @package.taxons.find_by name: 'Softwares' %>
-      <hr>
-      <div class="customize-card">
-        <p>Which software is right for you?</p>
-        <ul class="list-inline custom-options">
-          <% (@package.taxons.find_by name: 'Softwares').products.each do |product| %>
-            <li><div class="radio">
-              <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
-                <label><input class="" type="radio" name="package[software]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% else %>
-                <label><input class="" type="radio" name="package[software]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
-              <% end %>
-              <div class="product-price"><%= product.price.floor %>€</div>
-              </div></li>
-          <% end %>
-        </ul>
-      </div>
-      <% end %>
-
-    </div>
-
-    <div class="col-md-3">
-      <div class="price-card">
-        <p class="total-package-price"></p>
-        <div class="details-small-size">
-          <p>Free delivery</p>
-          <p>Price including TVA</p>
+<main class="container">
+  <%= simple_form_for :package, html: { class: "col-md-8 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
+    <div class="show-package row">
+      <div class="col-md-4">
+        <h3><%= @package.name %></h3>
+        <%= image_tag "laptop.png", class: "package-icon" %>
+        <br>
+        <div class="specs">
+          <p>Description:</p>
+          <p class="details-small-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <hr>
-        <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "customized-package-quantity-input float-right text-right", value: 1 }, wrapper_html: { class: "no-padding" }, label: false %>
-        <%= button_tag(type: 'submit', class: "btn btn-primary package-customize-btn") do %>
-          <i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;Add to cart
-        <% end %>
-        <p>or</p>
-        <%= button_tag(class: 'btn btn-success package-customize-btn', name: 'checkout') do %>
-          <i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;Check out
-        <% end %>
+      </div>
+      <div class="col-md-5">
+        <%= render 'customize' %>
+      </div>
+      <div class="col-md-3">
+        <div class="price-card">
+          <p class="total-package-price"></p>
+          <div class="details-small-size">
+            <p>Free delivery</p>
+            <p>Price including TVA</p>
+          </div>
+          <hr>
+          <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "customized-package-quantity-input float-right text-right", value: 1 }, wrapper_html: { class: "no-padding" }, label: false %>
+          <%= button_tag(type: 'submit', class: "btn btn-primary package-customize-btn") do %>
+            <i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;Add to cart
+          <% end %>
+          <p>or</p>
+          <%= button_tag class: 'btn btn-danger', id: 'checkout-link', name: 'checkout' do %>
+            <%= Spree.t(:checkout) %>
+          <% end %>
+        </div>
       </div>
     </div>
-
-  </div>
-<% end %>
+  <% end %>
+</main>
 
 <% content_for(:after_js) do %>
   <script type="text/javascript">
@@ -140,7 +46,6 @@
       });
       $(".total-package-price").text("Total: " + total + "€");
     });
-
     $("input[type=radio]").click(function() {
       var total = 0;
       $("input[type=radio]:checked").each(function() {
