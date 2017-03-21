@@ -138,3 +138,10 @@
   font-size: 15px;
   display: inline-block;
 }
+//contact modal
+.address-title{
+  color: $blue-primary;
+}
+.modal-backdrop{
+  position: static !important;
+}

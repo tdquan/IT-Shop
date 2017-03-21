@@ -23,11 +23,13 @@
             <p>Price including TVA</p>
           </div>
           <hr>
-          <%= f.input :quantity, as: :integer, input_html: { placeholder: "Quantity", class: "customized-package-quantity-input float-right text-right", value: 1 }, wrapper_html: { class: "no-padding" }, label: false %>
-          <%= button_tag(type: 'submit', class: "btn btn-primary package-customize-btn") do %>
-            <i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;Add to cart
+          <div class="row">
+            <p class="col-md-3 quantity-input-title">Quantity:</p>
+            <%= f.input :quantity, as: :integer, input_html: {  class: "col-md-9 customized-package-quantity-input float-right text-right", value: 1 }, wrapper_html: { class: 'no-padding' }, label: false %>
+          </div>
+          <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+            Add to cart
           <% end %>
-          <p>or</p>
           <%= button_tag class: 'btn btn-danger', id: 'checkout-link', name: 'checkout' do %>
             <%= Spree.t(:checkout) %>
           <% end %>

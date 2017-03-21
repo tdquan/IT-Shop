@@ -8,7 +8,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: lighter;
-  color: $dark-gray;
+  color: $blue-primary;
 }
 
 ul {
@@ -43,6 +43,9 @@ p:last-child {
 }
 
 .btn {
+  width: 114px;
+  font-size: 14px;
+  padding: 8px 20px;
   border-radius: 4px;
   margin-right: 7px;
   &:last-child {
@@ -57,7 +60,6 @@ p:last-child {
     margin-left: 0;
   }
 }
-
 // Convenient classes
 
 .inline-block {

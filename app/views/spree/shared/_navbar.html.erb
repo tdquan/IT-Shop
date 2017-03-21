@@ -10,10 +10,14 @@
       <% end %>
     </div>
 
-
     <!-- LOGIN/LOGOUT -->
 
-    <div class="account-group float-right"><b class="inline-block contact-group">Contact</b></div>
+    <!-- Trigger the modal with a button -->
+    <div class="account-group float-right"><a class="inline-block contact-group" data-toggle="modal" data-target="#myModal"><b>Contact</b></a></div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <%= render 'spree/shared/navbar_contact_modal' %>
+    </div>
 
     <div class="account-group float-right">
       <div class="dropdown">

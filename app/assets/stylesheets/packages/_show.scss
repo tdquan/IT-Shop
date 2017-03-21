@@ -2,9 +2,6 @@
   h3{
     color: $blue;
   }
-  .fa-star{
-    color: $yellow;
-  }
   .zoom-details{
     p{
       font-size: 12px;
@@ -13,10 +10,6 @@
   }
   .details-small-size{
     font-size: 13px;
-  }
-  .btn{
-    width:100%;
-    max-width: 160px;
   }
   .price-card{
     border: solid 1px #E9E9E9;
@@ -39,7 +32,14 @@
 }
 
 .customized-package-quantity-input {
-  width: 30%;
+  width: 45%;
   height: 2em;
   margin-bottom: 1em;
+}
+.quantity-input-title{
+  margin-top: 4px;
+}
+
+#checkout-link{
+  margin-top: 5px;
 }
