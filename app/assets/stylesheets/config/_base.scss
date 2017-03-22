@@ -8,7 +8,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: lighter;
-  color: $dark-gray;
+  color: $blue-primary;
 }
 
 ul {
@@ -37,12 +37,16 @@ p:last-child {
 // Overwrting some bootstrap classes
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: #fff;
-  background-color: #42a1ec;
+  color: $blue-primary;
+  // background-color: #42a1ec;
   // background: -webkit-linear-gradient(#42a1ec,#0070c9);
 }
 
 .btn {
+  width: 114px;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 4px;
   margin-right: 7px;
   &:last-child {
     margin-right: 0;
@@ -56,7 +60,6 @@ p:last-child {
     margin-left: 0;
   }
 }
-
 // Convenient classes
 
 .inline-block {
@@ -88,7 +91,11 @@ p:last-child {
 }
 
 .card {
-  border: solid 1px $light-gray;
+  h3{
+  text-align: center;
+  color: $blue-primary;
+  }
+  border: solid 0.1px $blue-primary;
   padding: 20px;
   margin-top: 50px;
   margin-bottom: 10px;

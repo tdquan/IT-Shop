@@ -1,0 +1,52 @@
+.package-footer{
+  .btn{
+    width: 114px;
+  }
+  .list-inline{
+    margin: 0;
+    .li {
+      padding: 0 !important;
+    }
+  }
+}
+.package-details {
+  width: 100%;
+  position: fixed;
+  background: $gray-primary;
+  border-bottom: 0;
+  border-top: 1px solid #d6d6d6;
+  z-index: 999;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  bottom: 0;
+  top: auto;
+  font-size: 12px;
+  list-style: none;
+}
+.package-price-details {
+  font-size: 1.5em;
+  font-weight: normal;
+  float: left;
+  padding-top: 29px;
+  }
+.shipping-details{
+  padding-top: 23px;
+}
+
+.add-cart{
+  margin-bottom: 5px;
+}
+
+.package-customize-btn {
+  font-size: 14px;
+  padding: 8px 20px;
+}
+
+.package-quantity-input {
+  width: 100%;
+  height: 2.5em;
+}
+
+.add-package{
+  padding-top: 22px;
+}

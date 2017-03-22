@@ -5,23 +5,30 @@
     <div class="logo-group">
       <%= link_to root_path do %>
         <div class="navbar_logo">
-          <%= image_tag "logo.png", alt: "logo image" %>
+          <%= image_tag "itproshop_logo.png", alt: "logo image" %>
         </div>
       <% end %>
     </div>
 
-
     <!-- LOGIN/LOGOUT -->
+
+    <!-- Trigger the modal with a button -->
+    <div class="account-group float-right"><a class="inline-block contact-group" data-toggle="modal" data-target="#myModal"><b>Contact</b></a></div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <%= render 'spree/shared/navbar_contact_modal' %>
+    </div>
 
     <div class="account-group float-right">
       <div class="dropdown">
         <a class="avatar-dropdown dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <div class="avatar-round">
-            <%= image_tag "avatar.png" %>
-          </div>
-          <p class="avatar-name">User</p>
+          <% if spree_user_signed_in? %>
+            <b class="inline-block avatar-name">User</b>
+          <% else %>
+            <b class="inline-block avatar-name">Sign in</b>
+          <% end %>
         </a>
-        <div class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu text-center" role="menu" aria-labelledby="dropdownMenuLink">
           <% if spree_user_signed_in? %>
             <%= link_to Spree.t(:my_account), spree.account_path, class: "dropdown-item" %>
             <%= link_to Spree.t(:logout), spree.logout_path, class: "dropdown-item" %>
@@ -32,7 +39,6 @@
         </div>
       </div>
     </div>
-
     <!-- SHOPPING CART -->
     <% if spree_user_signed_in? %>
       <div class="cart-group float-right">
@@ -44,6 +50,5 @@
         <% end %>
       </div>
     <% end %>
-
   </div>
 </nav>

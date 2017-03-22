@@ -1,0 +1,84 @@
+<h3>Customize your package</h3>
+<div class="customize-card first-card">
+  <p>Which computer is right for you?</p>
+  <ul class="list-inline custom-options">
+    <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
+      <li><div class="radio">
+      <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
+        <label><input class="customPack" type="radio" name="package[computer]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
+      <% else %>
+        <label><input class="customPack" type="radio" name="package[computer]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
+      <% end %>
+        <div class="product-price"><%= product.price.floor %>€</div>
+      </div></li>
+    <% end %>
+  </ul>
+</div>
+<hr>
+<div class="customize-card">
+  <p>Which keyboard is right for you?</p>
+  <ul class="list-inline custom-options">
+    <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
+      <li><div class="radio">
+        <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
+          <label><input type="radio" name="package[keyboard]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% else %>
+          <label><input type="radio" name="package[keyboard]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% end %>
+        <div class="product-price"><%= product.price.floor %>€</div>
+      </div></li>
+    <% end %>
+  </ul>
+</div>
+<hr>
+<div class="customize-card">
+  <p>Which mouse is right for you?</p>
+  <ul class="list-inline custom-options">
+    <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
+      <li><div class="radio">
+        <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
+          <label><input type="radio" name="package[mouse]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% else %>
+          <label><input type="radio" name="package[mouse]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% end %>
+        <div class="product-price"><%= product.price.floor %>€</div>
+      </div></li>
+    <% end %>
+  </ul>
+</div>
+<% if @package.taxons.find_by name: 'Monitor' %>
+<hr>
+<div class="customize-card">
+  <p>Which monitor is right for you?</p>
+  <ul class="list-inline custom-options">
+    <% (@package.taxons.find_by name: 'Monitor').products.each do |product| %>
+      <li><div class="radio">
+        <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
+          <label><input type="radio" name="package[monitor]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% else %>
+          <label><input type="radio" name="package[monitor]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% end %>
+        <div class="product-price"><%= product.price.floor %>€</div>
+      </div></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<% if @package.taxons.find_by name: 'Softwares' %>
+<hr>
+<div class="customize-card">
+  <p>Which software is right for you?</p>
+  <ul class="list-inline custom-options">
+    <% (@package.taxons.find_by name: 'Softwares').products.each do |product| %>
+      <li><div class="radio">
+        <% if product.meta_keywords.include? "#{@package.name.split.map(&:downcase).join('_')}_default" %>
+          <label><input type="radio" name="package[software]" value="<%= product.id %>" checked="checked" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% else %>
+          <label><input type="radio" name="package[software]" value="<%= product.id %>" price="<%= product.price.floor %>"><%= product.name %></label>
+        <% end %>
+        <div class="product-price"><%= product.price.floor %>€</div>
+        </div></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>

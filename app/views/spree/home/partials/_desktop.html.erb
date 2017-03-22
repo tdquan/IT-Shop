@@ -1,40 +1,40 @@
 <div class="container-fluid">
-  <h1 class="text-center">Choose your package</h1>
+  <h3 class="text-center">Choose your desktop package</h3>
 
   <section class="package-selection homepage-section row">
      <div class="col-md-8 col-md-offset-2">
       <ul class="nav nav-pills nav-justified">
-        <li class="active package-overview-container">
+        <li class="active package-overview-container container-desktop">
           <a data-toggle="pill" href="#basic-desktop-package" class="package-overview-select clearfix">
             <h4><%= @basic.name %></h4>
-            <div class="text-center package-icon-container"><%= image_tag "coffee.png", alt: "Basic Pakage image", class: "package-icon" %></div>
+            <div class="text-center package-icon-container"><%= image_tag "desktop_gear1.png", alt: "Basic Pakage image", class: "package-icon" %></div>
             <ul class="package-overview-details text-left">
               <li>Dell Computer</li>
               <li>Keyboard</li>
               <li>HP Mouse</li>
             </ul>
-            <hr>
-            <b class="package-price float-right">2,058 €</b>
+            <b class="package-price">2,058 €</b>
           </a>
         </li>
-        <li class="package-overview-container">
+        <hr class="hidden-md hidden-lg">
+        <li class="package-overview-container container-desktop">
           <a data-toggle="pill" href="#standard-desktop-package" class="package-overview-select clearfix">
             <h4><%= @standard.name %></h4>
-            <div class="text-center package-icon-container"><%= image_tag "cloud.png", alt: "Standard Pakage image", class: "package-icon" %></div>
+            <div class="text-center package-icon-container"><%= image_tag "desktop_gear2.png", alt: "Standard Pakage image", class: "package-icon" %></div>
             <ul class="package-overview-details text-left">
               <li>Dell Computer or Apple Computer</li>
               <li>Keyboard</li>
               <li>HP Mouse</li>
               <li>Microsoft Office</li>
             </ul>
-            <hr>
-            <b class="package-price float-right">2,137 €</b>
+            <b class="package-price">2,137 €</b>
           </a>
         </li>
-        <li class="package-overview-container">
+        <hr class="hidden-md hidden-lg">
+        <li class="package-overview-container container-desktop">
           <a data-toggle="pill" href="#premium-desktop-package" class="package-overview-select clearfix">
             <h4><%= @premium.name %></h4>
-            <div class="text-center package-icon-container"><%= image_tag "desktop.png", alt: "Premium Pakage image", class: "package-icon" %></div>
+            <div class="text-center package-icon-container"><%= image_tag "desktop_gear3.png", alt: "Premium Pakage image", class: "package-icon" %></div>
             <ul class="package-overview-details text-left">
               <li>Dell Computer or Apple Computer</li>
               <li>Keyboard</li>
@@ -42,8 +42,7 @@
               <li>Microsoft Office</li>
               <li>External Monitor</li>
             </ul>
-            <hr>
-            <b class="package-price float-right">2,436 €</b>
+            <b class="package-price">2,436 €</b>
           </a>
         </li>
       </ul>

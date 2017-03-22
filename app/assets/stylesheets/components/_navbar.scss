@@ -7,14 +7,13 @@
   display: block;
   margin: 0;
   width: 100%;
-  height: 48px;
+  height: 80px;
   min-height: 48px;
   border: none;
   border-radius: 0;
-  background: $dark-gray;
-  background: rgba(0,0,0,0.8);
+  background: $gray-primary;
+  border-bottom: 1px solid #d6d6d6;
   font-size: 17px;
-  color: #fff;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -26,22 +25,24 @@
 .logo-group {
   float: left;
   margin-left: 30px;
-  height: 48px;
+  height: 80px;
   max-width: 200px;
   overflow: hidden;
+  padding: 14px 0;
   .navbar_logo {
     height: 48px;
     img {
       height: 100%;
       width: auto;
-      padding: 10px 0;
+      padding: 5px 0;
     }
   }
 }
 
 .account-group {
   float: right;
-  height: 48px;
+  height: 37px;
+  margin-top: 22px;
   .avatar-dropdown {
     display: inline-block;
     height: 100%;
@@ -53,15 +54,14 @@
       display: inline-block;
       margin-right: 10px;
       margin-bottom: 0;
-      font-size: 12px;
-      font-weight: lighter;
-      color: #fff;
+      font-size: 15px;
+      color: $blue-primary;
     }
   }
-  &:hover {
-    background-color: #444;
-    background-color: linear-gradient(#222,#444);
-  }
+  // &:hover {
+  //   background-color: #444;
+  //   background-color: linear-gradient(#222,#444);
+  // }
 }
 
 .avatar-round {
@@ -88,38 +88,37 @@
 .dropdown-menu {
   text-align: center;
   padding: 0;
-  background-color: $dark-gray;
-  background-color: rgba(0,0,0,0.8);
+  background-color: $gray-primary;
   border-radius: 3px;
   a.dropdown-item {
     line-height: 2.5em;
-    color: #fff;
+    color: $blue-primary;
     display: block;
-    font-size: 12px;
+    font-size: 15px;
     &:hover {
-      background-color: #444;
-      background-color: linear-gradient(#222,#444);
+      background-color: darken($gray-primary, 10%);
       text-decoration: none;
     }
   }
 }
 
 .cart-group {
-  height: 48px;
+  height: 80px;
   line-height: 48px;
   vertical-align: middle;
   padding: 0 10px;
+  margin-top: 10px;
   a {
     color: #fff;
     .fa {
       margin-right: 5px;
+      color: $blue-primary;
     }
     .shopping-cart-count {
       font-size: 14px;
-      background-color: $orange;
+      background-color: $blue-secondary;
       border-radius: 50%;
       width: 25px;
-      color: #fff;
       span {
         line-height: 25px;
         text-align: center;
@@ -128,8 +127,21 @@
       }
     }
   }
-  &:hover {
-    background-color: #444;
-    background-color: linear-gradient(#222,#444);
-  }
+  // &:hover {
+  //   background-color: #444;
+  //   background-color: linear-gradient(#222,#444);
+  // }
+}
+
+.contact-group{
+  color: $blue-primary;
+  font-size: 15px;
+  display: inline-block;
+}
+//contact modal
+.address-title{
+  color: $blue-primary;
+}
+.modal-backdrop{
+  position: static !important;
 }

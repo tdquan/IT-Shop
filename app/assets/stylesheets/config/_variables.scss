@@ -24,10 +24,10 @@ $base-height: 1.4;
  * Colors
  * ------------------------------------- */
 // Scheme
-$brand-color: #42a1ec;
+// $brand-color: #42a1ec;
 
 $red: #EE5F5B;
-$blue-primary: #42a1ec;
+// $blue-primary: #42a1ec;
 $red-dark: #C02932;
 $red-light: #F7747E;
 $blue: #42a1ec;
@@ -38,3 +38,17 @@ $gray: #888888;
 $light-gray: #E9E9E9;
 $dark-gray: #333;
 $dark-gray-2x: #6e727a;
+
+// after design implementation
+$brand-color: #417BEF;
+
+$blue-primary: #417BEF;
+$blue-secondary: #43B4ED;
+
+$blue-only: #0EE0FF; //laptop color
+$blue-green: #00FCD6; //desktop color
+$green-only: #76FBA2; //workstation color
+
+$light-blue: #d9edf7;
+$gray-primary: #F8F8F8;
+
