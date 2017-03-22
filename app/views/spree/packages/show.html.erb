@@ -3,11 +3,11 @@
 <main class="container">
   <%= simple_form_for :package, html: { class: "col-md-8 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
     <div class="show-package row">
-      <div class="col-md-4">
+      <div class="col-md-4 text-center">
         <h3><%= @package.name %></h3>
         <%= image_tag "laptop.png", class: "package-icon" %>
-        <br>
-        <div class="specs">
+        <br><br>
+        <div class="specs text-left">
           <p>Description:</p>
           <p class="details-small-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
@@ -30,9 +30,8 @@
           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
             Add to cart
           <% end %>
-          <%= button_tag class: 'btn btn-danger', id: 'checkout-link', name: 'checkout' do %>
-            <%= Spree.t(:checkout) %>
-          <% end %>
+          <br><br>
+          <%= link_to "Check out", checkout_url, class: 'btn btn-danger'  %>
         </div>
       </div>
     </div>
