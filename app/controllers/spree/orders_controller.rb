@@ -101,6 +101,13 @@ module Spree
       end
     end
 
+    def remove_item
+      @order = current_order
+      @item = @order.line_items.find(params[:line_item_id])
+      @order.line_items.delete(@item)
+      redirect_to cart_path
+    end
+
     private
 
       def order_params
