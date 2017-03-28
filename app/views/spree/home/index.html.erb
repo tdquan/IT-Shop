@@ -5,14 +5,14 @@
 
     <div class="col-md-2 col-sm-1 text-center">
     <div class="wrapper">
-      <a class="promotion" href="#">
+      <%= link_to special_deals_url, class: "promotion" do %>
         <div class="special-deal-wrapper">
           <%= image_tag "special_deal.png", class: "special-deal" %>
         </div>
         <div class="promo-wrapper">
           <%= image_tag "avatar.png", class: "promo-picture" %>
         </div>
-      </a>
+      <% end %>
       </div>
     </div>
     <hr class="hidden-md hidden-lg">
