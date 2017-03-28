@@ -39,11 +39,14 @@
   }
 }
 
-.account-group {
+.navbar-group {
   float: right;
-  height: 37px;
-  margin-top: 22px;
-  .avatar-dropdown {
+  height: 80px;
+  line-height: 80px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: $blue-primary;
+  a {
     display: inline-block;
     height: 100%;
     &:hover, &:visited, &:focus {
@@ -52,16 +55,11 @@
     }
     .avatar-name {
       display: inline-block;
-      margin-right: 10px;
       margin-bottom: 0;
       font-size: 15px;
       color: $blue-primary;
     }
   }
-  // &:hover {
-  //   background-color: #444;
-  //   background-color: linear-gradient(#222,#444);
-  // }
 }
 
 .avatar-round {
@@ -78,11 +76,6 @@
     height: 100%;
     width: auto;
   }
-}
-
-.dropdown {
-  margin-right: 15px;
-  height: 100%;
 }
 
 .dropdown-menu {
@@ -102,12 +95,7 @@
   }
 }
 
-.cart-group {
-  height: 80px;
-  line-height: 48px;
-  vertical-align: middle;
-  padding: 0 10px;
-  margin-top: 10px;
+.navbar-group.cart-group {
   a {
     color: #fff;
     .fa {
@@ -133,11 +121,6 @@
   // }
 }
 
-.contact-group{
-  color: $blue-primary;
-  font-size: 15px;
-  display: inline-block;
-}
 //contact modal
 .address-title{
   color: $blue-primary;
