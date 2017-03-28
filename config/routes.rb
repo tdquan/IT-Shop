@@ -8,10 +8,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   Spree::Core::Engine.add_routes do
     # Routes to different categories
+    get '/special-deals', to: 'products#special_deals', as: :special_deals
+
     scope :categories do
       get '/:category', to: 'home#show', as: :category
-
       get '/:category/:package_name', to: 'packages#show', as: :package
+
+
       post '/:category/:id', to: 'packages#add', as: :add_package
       post '/:category/customized/:package_name', to: 'packages#add_customized', as: :add_customized_package
     end

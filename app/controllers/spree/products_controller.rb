@@ -26,6 +26,10 @@ module Spree
       redirect_if_legacy_path
     end
 
+    def special_deals
+
+    end
+
     private
 
       def accurate_title
