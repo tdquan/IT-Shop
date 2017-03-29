@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306164433) do
+ActiveRecord::Schema.define(version: 20170328082636) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -134,6 +134,7 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.integer  "stock_location_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.index ["number"], name: "index_spree_customer_returns_on_number", unique: true
   end
 
   create_table "spree_gateways", force: :cascade do |t|
@@ -156,12 +157,15 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.integer  "variant_id"
     t.integer  "order_id"
     t.integer  "shipment_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.boolean  "pending",      default: true
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.boolean  "pending",                 default: true
     t.integer  "line_item_id"
+    t.integer  "quantity",                default: 1
+    t.integer  "original_return_item_id"
     t.index ["line_item_id"], name: "index_spree_inventory_units_on_line_item_id"
     t.index ["order_id"], name: "index_inventory_units_on_order_id"
+    t.index ["original_return_item_id"], name: "index_spree_inventory_units_on_original_return_item_id"
     t.index ["shipment_id"], name: "index_inventory_units_on_shipment_id"
     t.index ["variant_id"], name: "index_inventory_units_on_variant_id"
   end
@@ -285,7 +289,7 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.index ["considered_risky"], name: "index_spree_orders_on_considered_risky"
     t.index ["created_by_id"], name: "index_spree_orders_on_created_by_id"
     t.index ["guest_token"], name: "index_spree_orders_on_guest_token"
-    t.index ["number"], name: "index_spree_orders_on_number"
+    t.index ["number"], name: "index_spree_orders_on_number", unique: true
     t.index ["ship_address_id"], name: "index_spree_orders_on_ship_address_id"
     t.index ["store_id"], name: "index_spree_orders_on_store_id"
     t.index ["user_id", "created_by_id"], name: "index_spree_orders_on_user_id_and_created_by_id"
@@ -328,7 +332,7 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.string   "number"
     t.string   "cvv_response_code"
     t.string   "cvv_response_message"
-    t.index ["number"], name: "index_spree_payments_on_number"
+    t.index ["number"], name: "index_spree_payments_on_number", unique: true
     t.index ["order_id"], name: "index_spree_payments_on_order_id"
     t.index ["payment_method_id"], name: "index_spree_payments_on_payment_method_id"
     t.index ["source_id", "source_type"], name: "index_spree_payments_on_source_id_and_source_type"
@@ -562,6 +566,7 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.datetime "created_at",                                    null: false
     t.datetime "updated_at",                                    null: false
     t.index ["customer_return_id"], name: "index_spree_reimbursements_on_customer_return_id"
+    t.index ["number"], name: "index_spree_reimbursements_on_number", unique: true
     t.index ["order_id"], name: "index_spree_reimbursements_on_order_id"
   end
 
@@ -582,6 +587,7 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.datetime "updated_at"
     t.integer  "stock_location_id"
     t.integer  "return_authorization_reason_id"
+    t.index ["number"], name: "index_spree_return_authorizations_on_number", unique: true
     t.index ["return_authorization_reason_id"], name: "index_return_authorizations_on_return_authorization_reason_id"
   end
 
@@ -598,13 +604,11 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.string   "acceptance_status"
     t.integer  "customer_return_id"
     t.integer  "reimbursement_id"
-    t.integer  "exchange_inventory_unit_id"
     t.text     "acceptance_status_errors"
     t.integer  "preferred_reimbursement_type_id"
     t.integer  "override_reimbursement_type_id"
     t.boolean  "resellable",                                               default: true,  null: false
     t.index ["customer_return_id"], name: "index_return_items_on_customer_return_id"
-    t.index ["exchange_inventory_unit_id"], name: "index_spree_return_items_on_exchange_inventory_unit_id"
   end
 
   create_table "spree_role_users", force: :cascade do |t|
@@ -638,7 +642,7 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.decimal  "taxable_adjustment_total",     precision: 10, scale: 2, default: "0.0", null: false
     t.decimal  "non_taxable_adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
     t.index ["address_id"], name: "index_spree_shipments_on_address_id"
-    t.index ["number"], name: "index_shipments_on_number"
+    t.index ["number"], name: "index_spree_shipments_on_number", unique: true
     t.index ["order_id"], name: "index_spree_shipments_on_order_id"
     t.index ["stock_location_id"], name: "index_spree_shipments_on_stock_location_id"
   end
@@ -780,7 +784,7 @@ ActiveRecord::Schema.define(version: 20170306164433) do
     t.datetime "updated_at",              null: false
     t.string   "number"
     t.index ["destination_location_id"], name: "index_spree_stock_transfers_on_destination_location_id"
-    t.index ["number"], name: "index_spree_stock_transfers_on_number"
+    t.index ["number"], name: "index_spree_stock_transfers_on_number", unique: true
     t.index ["source_location_id"], name: "index_spree_stock_transfers_on_source_location_id"
   end
 

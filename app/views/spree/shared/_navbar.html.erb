@@ -13,19 +13,21 @@
     <!-- LOGIN/LOGOUT -->
 
     <!-- Trigger the modal with a button -->
-    <div class="account-group float-right"><a class="inline-block contact-group" data-toggle="modal" data-target="#myModal"><b>Contact</b></a></div>
+    <div class="navbar-group float-right">
+      <a data-toggle="modal" data-target="#myModal"><b>Contact</b></a>
+    </div>
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
       <%= render 'spree/shared/navbar_contact_modal' %>
     </div>
 
-    <div class="account-group float-right">
+    <div class="navbar-group float-right">
       <div class="dropdown">
-        <a class="avatar-dropdown dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <% if spree_user_signed_in? %>
-            <b class="inline-block avatar-name">User</b>
+            <b><%= spree_current_user.first_name || "You" %></b>
           <% else %>
-            <b class="inline-block avatar-name">Sign in</b>
+            <b>Sign in</b>
           <% end %>
         </a>
         <div class="dropdown-menu text-center" role="menu" aria-labelledby="dropdownMenuLink">
@@ -41,7 +43,7 @@
     </div>
     <!-- SHOPPING CART -->
     <% if spree_user_signed_in? %>
-      <div class="cart-group float-right">
+      <div class="cart-group navbar-group float-right">
         <%= link_to cart_path do %>
           <% unless spree_current_user.orders.empty? %>
             <div class="inline-block"><i class="fa fa-shopping-cart fa-lg"></i></div>
