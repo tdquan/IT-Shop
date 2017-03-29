@@ -1,4 +1,6 @@
 $(document).on('turbolinks:load', function() {
+  // Columns heights in certain pages
+
   $('.home.show').ready(function() {
     $('.package-selection').css({'margin-bottom': $('.package-details').height()});
 
@@ -32,4 +34,10 @@ $(document).on('turbolinks:load', function() {
       $(this).height(max_height);
     });
   });
+
+  // Dismissing flash messages
+
+  setTimeout(function() {
+    $('#flash-message').slideUp();
+  }, 3000);
 });
