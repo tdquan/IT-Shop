@@ -2,7 +2,7 @@ module Spree
   class ProductsController < Spree::StoreController
     before_action :load_product, only: :show
     before_action :load_taxon, only: :index
-    before_action :set_user, :set_order, only: :show
+    before_action :set_user, :set_order, only: [:show, :index]
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_404
     helper 'spree/taxons'
