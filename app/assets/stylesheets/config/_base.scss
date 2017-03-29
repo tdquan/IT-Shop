@@ -42,6 +42,10 @@ p:last-child {
   // background: -webkit-linear-gradient(#42a1ec,#0070c9);
 }
 
+.nav-pills.progress-steps > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: white;
+}
+
 .btn {
   width: 114px;
   font-size: 14px;
