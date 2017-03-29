@@ -2,8 +2,13 @@
   <div class="col-md-3 col-md-offset-1 hidden-xs hidden-sm">
     <div class="package-overview-details shipping-details">
       <ul class="list-inline">
-        <li class="text-center"><i class="fa fa-check" aria-hidden="true"></i></li>
-        <li><h6>in stock</h6></li>
+        <% if @premium_stock %>
+          <li class="text-center"><i class="fa fa-check" aria-hidden="true"></i></li>
+          <li><h6>in stock</h6></li>
+        <% else %>
+          <li class="text-center text-red"><i class="fa fa-close" aria-hidden="true"></i></li>
+          <li><h6 class="text-red">out of stock</h6></li>
+        <% end %>
       </ul>
       <ul class="list-inline">
         <li><i class="fa fa-truck" aria-hidden="true"></i></li>
