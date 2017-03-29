@@ -26,6 +26,15 @@ module Spree
       redirect_if_legacy_path
     end
 
+    def special_deals
+      @products = []
+      Spree::Promotion.all.each do |promotion|
+        promotion.products.each do |product|
+          @products << product
+        end
+      end
+    end
+
     private
 
       def accurate_title

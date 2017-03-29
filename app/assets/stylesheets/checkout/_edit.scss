@@ -6,3 +6,6 @@
   border: 1px solid #ddd;
 }
 
+#checkout .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: white;
+}
