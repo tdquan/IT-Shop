@@ -46,12 +46,13 @@
   padding: 0 10px;
   cursor: pointer;
   color: $blue-primary;
+  transition: color 0.3s ease;
   a {
     display: inline-block;
     height: 100%;
-    &:hover, &:visited, &:focus {
+    &:hover, &:focus {
       text-decoration: none;
-      color: inherit;
+      color: $blue-secondary;
     }
     .avatar-name {
       display: inline-block;
@@ -101,6 +102,10 @@
     .fa {
       margin-right: 5px;
       color: $blue-primary;
+      transition: color 0.3s ease;
+      &:hover {
+        color: $blue-secondary;
+      }
     }
     .shopping-cart-count {
       font-size: 14px;
