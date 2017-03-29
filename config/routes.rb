@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   Spree::Core::Engine.add_routes do
     # Routes to different categories
     get '/special-deals', to: 'products#special_deals', as: :special_deals
-    patch '/order/remove_item', to: 'orders#remove_item', as: :remove_item
+
     scope :categories do
       get '/:category', to: 'home#show', as: :category
       get '/:category/:package_name', to: 'packages#show', as: :package

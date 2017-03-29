@@ -6,14 +6,7 @@ class Spree::PackagesController < Spree::StoreController
 
   # Quick add
   def add
-    # Define the taxon that include all the package items
-    @taxon = @package.taxons.first
-    return unless @taxon
-
-    # Find all products in the package
-    @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
-    @products = @searcher.retrieve_products.where("meta_keywords like?", "%#{@package.name.split.map(&:downcase).join('_')}_default%")
-    @taxonomies = Spree::Taxonomy.includes(root: :children)
+    set_products
 
     # Add products into the cart as line items
     @products.each do |p|
@@ -54,10 +47,33 @@ class Spree::PackagesController < Spree::StoreController
     redirect_to :back
   end
 
+  def package_has_stock?
+    set_products
+
+    @products.each do |p|
+      if p.stock_items.first.count_on_hand <= 0
+        return false
+      end
+
+      return true
+    end
+  end
+
   private
 
   def set_package
     @package = Spree::Taxonomy.find_by(name: params[:package_name].split.map(&:capitalize).join(' '))
+  end
+
+  def set_products
+    # Define the taxon that include all the package items
+    @taxon = @package.taxons.first
+    return unless @taxon
+
+    # Find all products in the package
+    @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
+    @products = @searcher.retrieve_products.where("meta_keywords like?", "%#{@package.name.split.map(&:downcase).join('_')}_default%")
+    @taxonomies = Spree::Taxonomy.includes(root: :children)
   end
 
   # def order_params
