@@ -111,6 +111,9 @@ p:last-child {
       background-color: $red;
     }
     &.alert-notice, &.notice {
+      background-color: $blue;
+    }
+    &.alert-success {
       background-color: $green;
     }
   }
