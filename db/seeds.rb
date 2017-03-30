@@ -85,6 +85,7 @@ premium_workstation_monitor = Spree::Taxon.create!(taxonomy_id: premium_workstat
 # default computer
 a = Spree::Product.create!(name: 'Dell Computer', price: 1000, shipping_category_id: 1, meta_keywords: 'basic_laptop_default standard_laptop_default premium_laptop_default basic_desktop_default standard_desktop_default premium_desktop_default basic_workstation_default standard_workstation_default premium_workstation_default', available_on: Time.now)
 a.taxons = [basic_laptop_computer, standard_laptop_computer, premium_laptop_computer, basic_desktop_computer, standard_desktop_computer, premium_desktop_computer, basic_workstation_computer, standard_workstation_computer, premium_workstation_computer]
+a.images << Spree::Image.create!({:attachment => open('app/assets/images/mac-128K.jpg'), :viewable => a})
 # others
 b = Spree::Product.create!(name: 'Apple Computer', price: 2000, shipping_category_id: 1, meta_keywords: "", available_on: Time.now)
 b.taxons = [basic_laptop_computer, standard_laptop_computer, premium_laptop_computer, basic_desktop_computer, standard_desktop_computer, premium_desktop_computer, basic_workstation_computer, standard_workstation_computer, premium_workstation_computer]
