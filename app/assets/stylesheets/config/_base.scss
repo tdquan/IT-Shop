@@ -94,14 +94,26 @@ p:last-child {
   color: $red;
 }
 
+.text-green {
+  color: $green;
+}
+
 .no-padding {
   padding: 0;
 }
 
-.alert.alert-error {
-  background-color: $red;
-  text-align: center;
-  color: white;
+#flash-message {
+  .alert {
+    text-align: center;
+    color: white;
+    margin: 5px 0;
+    &.alert-error {
+      background-color: $red;
+    }
+    &.alert-notice, &.notice {
+      background-color: $green;
+    }
+  }
 }
 
 .card {

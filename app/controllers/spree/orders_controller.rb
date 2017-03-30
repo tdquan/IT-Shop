@@ -2,7 +2,7 @@
 
 module Spree
   class OrdersController < Spree::StoreController
-    before_action :check_authorization
+    before_action :check_authorization, :set_user, :set_order
     rescue_from ActiveRecord::RecordNotFound, with: :render_404
     helper 'spree/products', 'spree/orders'
 
@@ -31,14 +31,13 @@ module Spree
       else
         respond_with(@order)
       end
-      # raise
     end
 
     # Shows the current incomplete order from the session
     def edit
-      @order = current_order || Order.incomplete.
-                                  includes(line_items: [variant: [:images, :option_values, :product]]).
-                                  find_or_initialize_by(guest_token: cookies.signed[:guest_token])
+      @order = current_order || Order.incomplete
+                                     .includes(line_items: [variant: [:images, :option_values, :product]])
+                                     .find_or_initialize_by(guest_token: cookies.signed[:guest_token])
       associate_user
     end
 
@@ -119,7 +118,7 @@ module Spree
       end
 
       def assign_order_with_lock
-        @order = current_order(lock: true)
+        # @order = current_order(lock: true)
         unless @order
           flash[:error] = Spree.t(:order_not_found)
           redirect_to root_path and return
