@@ -1,5 +1,3 @@
-<%= render "spree/shared/navbar" %>
-
 <% @body_id = 'login' %>
 <div class="col-md-4 <%= request.path == spree.login_path ? "col-md-offset-4" : "" %>">
   <div class="card">
@@ -13,8 +11,8 @@
       <%= render :partial => 'spree/shared/login' %>
       <div class="text-center">
         <%= Spree.t(:or) %>
-            <%= link_to Spree.t(:create_a_new_account), spree.signup_path %> |
-            <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+        <%= link_to Spree.t(:create_a_new_account), spree.signup_path %> |
+        <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
       </div>
       <div data-hook="login_extras"></div>
     </div>
