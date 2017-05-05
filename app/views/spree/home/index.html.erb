@@ -6,6 +6,7 @@
     <div class="col-md-2 text-center">
     <div class="wrapper">
       <%= link_to special_deals_url, class: "promotion" do %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <div class="special-deal-wrapper">
           <%= image_tag "special_deal.png", class: "special-deal" %>
         </div>
@@ -16,6 +17,8 @@
     <hr class="hidden-md hidden-lg">
     <div class="col-md-8">
       <div class="row">
+        <%= link_to (category_path(category: "laptop")) do %>
+        <span>
         <div class="col-md-4 text-center">
           <h3>Laptop</h3>
           <div class="package-icon-container"><%= image_tag "laptop.png", class: "package-icon" %></div>
@@ -23,7 +26,10 @@
           <br>
           <%= link_to "Select", category_path(category: "laptop"), class: "btn btn-warning" %>
         </div>
+      </span><% end %>
         <hr class="hidden-md hidden-lg">
+        <%= link_to (category_path(category: "desktop")) do %>
+        <span>
         <div class="col-md-4 text-center">
           <h3>Desktop</h3>
           <div class="package-icon-container"><%= image_tag "desktop.png", class: "package-icon" %></div>
@@ -31,7 +37,10 @@
           <br>
           <%= link_to "Select", category_path(category: "desktop"), class: "btn btn-success" %>
         </div>
+      </span><% end %>
         <hr class="hidden-md hidden-lg">
+        <%= link_to (category_path(category: "laptop")) do %>
+        <span>
         <div class="col-md-4 text-center">
           <h3>Workstation</h3>
           <div class="package-icon-container"><%= image_tag "workstation.png", class: "package-icon" %></div>
@@ -39,6 +48,7 @@
           <br>
           <%= link_to "Select", category_path(category: "workstation"), class: "btn btn-info" %>
         </div>
+      </span><% end %>
       </div>
     </div>
   </section>

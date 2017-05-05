@@ -18,21 +18,25 @@
 .package-overview-container.active {
   a {
     background: none !important;
+    box-shadow: 3px 3px 3px;
   }
 }
 .container-laptop.active{
   a{
     border: 1px solid $blue-only;
+    box-shadow: 3px 3px 3px;
   }
 }
 .container-desktop.active{
   a{
     border: 1px solid $blue-green;
+    box-shadow: 3px 3px 3px;
   }
 }
 .container-workstation.active{
   a{
     border: 1px solid $green-only;
+    box-shadow: 3px 3px 3px;
   }
 }
 .package-icon-container {

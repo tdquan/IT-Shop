@@ -4,6 +4,12 @@ $(document).on('turbolinks:load', function() {
   $('.home.show').ready(function() {
     $('.package-selection').css({'margin-bottom': $('.package-details').height()});
 
+    $( ".close" ).click(function() {
+      $( ".promotion" ).hide( "slow", function() {
+        alert( "Comeback later for our best deals." );
+      });
+    });
+
     // Equal heights for all features columns
     var max_height = 0;
 
