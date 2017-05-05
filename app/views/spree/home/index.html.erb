@@ -9,7 +9,7 @@
         <div class="special-deal-wrapper">
           <%= image_tag "special_deal.png", class: "special-deal" %>
         </div>
-      
+
       <% end %>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <div class="col-md-4 text-center">
           <h3>Laptop</h3>
           <div class="package-icon-container"><%= image_tag "laptop.png", class: "package-icon" %></div>
-          <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus placeat, eos optio. Adipisci tempora possimus in quisquam ex debitis voluptatibus, minus architecto quas eligendi, dolore provident incidunt? Ratione, recusandae facilis?</p>
+          <p class="text-left category-description"><%= Spree.t(:resume_pack1) %></p>
           <br>
           <%= link_to "Select", category_path(category: "laptop"), class: "btn btn-warning" %>
         </div>
@@ -27,7 +27,7 @@
         <div class="col-md-4 text-center">
           <h3>Desktop</h3>
           <div class="package-icon-container"><%= image_tag "desktop.png", class: "package-icon" %></div>
-          <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem error sequi quo beatae enim pariatur magnam nobis voluptas. Voluptas cupiditate blanditiis molestiae optio fugit amet, officiis tenetur quasi inventore debitis.</p>
+          <p class="text-left category-description"><%= Spree.t(:resume_pack2) %></p>
           <br>
           <%= link_to "Select", category_path(category: "desktop"), class: "btn btn-success" %>
         </div>
@@ -35,7 +35,7 @@
         <div class="col-md-4 text-center">
           <h3>Workstation</h3>
           <div class="package-icon-container"><%= image_tag "workstation.png", class: "package-icon" %></div>
-          <p class="text-left category-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur atque temporibus doloremque eaque dolore delectus fugit, veniam autem suscipit deleniti ducimus eum, officia ipsam explicabo? Pariatur mollitia, sint alias deserunt.</p>
+          <p class="text-left category-description"><%= Spree.t(:resume_pack3) %></p>
           <br>
           <%= link_to "Select", category_path(category: "workstation"), class: "btn btn-info" %>
         </div>

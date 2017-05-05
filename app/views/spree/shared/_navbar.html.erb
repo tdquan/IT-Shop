@@ -38,8 +38,14 @@
             <%= link_to Spree.t(:login), spree.login_path, class: "dropdown-item" %>
             <%= link_to Spree.t(:signup), spree.signup_path, class: "dropdown-item" %>
           <% end %>
+
         </div>
+        <div>
+          <%= link_to "FR", "/locale/set?locale=fr", class: "fr" %>&nbsp;&nbsp;/&nbsp;&nbsp;<%= link_to "EN", "/locale/set?locale=en", class: "en" %>
+        </div>
+
       </div>
+
     </div>
     <!-- SHOPPING CART -->
     <% if spree_user_signed_in? %>
@@ -64,4 +70,3 @@
 <div id="flash-message" class="col-md-8 col-md-offset-2">
   <%= flash_messages %>
 </div>
-
