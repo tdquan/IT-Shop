@@ -76,6 +76,8 @@ group :production do
   gem 'capistrano3-unicorn',   require: false
 end
 
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

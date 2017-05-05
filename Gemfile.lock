@@ -1,6 +1,17 @@
 GIT
+  remote: https://github.com/spree-contrib/spree_i18n.git
+  revision: a805a405c3aac03fec5f61986f230c2dd9fce4aa
+  specs:
+    spree_i18n (3.2.0.alpha)
+      i18n_data
+      kaminari-i18n
+      rails-i18n
+      routing-filter
+      spree_core (>= 3.1.0, < 4.0)
+
+GIT
   remote: https://github.com/spree/spree.git
-  revision: 0f5e17559e60ae3ade4a8fa65a1b3fbfcf577f6c
+  revision: ed7fb125b45908372fbec5f034e37a3bb965b3a3
   specs:
     spree (3.3.0.alpha)
       spree_api (= 3.3.0.alpha)
@@ -120,7 +131,7 @@ GEM
       activerecord (>= 4.0)
     acts_as_list (0.9.4)
       activerecord (>= 3.0)
-    addressable (2.5.0)
+    addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     airbrussh (1.1.2)
       sshkit (>= 1.6.1, != 1.7.0)
@@ -134,6 +145,7 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    bindex (0.5.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.7)
@@ -207,6 +219,7 @@ GEM
     highline (1.6.21)
     htmlentities (4.3.4)
     i18n (0.8.1)
+    i18n_data (0.7.0)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -231,6 +244,9 @@ GEM
       activerecord
       kaminari-core (= 1.0.1)
     kaminari-core (1.0.1)
+    kaminari-i18n (0.4.0)
+      kaminari
+      rails
     kgio (2.11.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -299,6 +315,9 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-i18n (5.0.3)
+      i18n (~> 0.7)
+      railties (~> 5.0)
     railties (5.0.2)
       actionpack (= 5.0.2)
       activesupport (= 5.0.2)
@@ -321,6 +340,9 @@ GEM
       railties (>= 4.2.0, < 5.1)
     rest-client (1.6.9)
       mime-types (~> 1.16)
+    routing-filter (0.6.0)
+      actionpack (>= 4.2, < 5.1)
+      activesupport (>= 4.2, < 5.1)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -378,7 +400,7 @@ GEM
       tzinfo
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.10)
+    uglifier (3.1.11)
       execjs (>= 0.3.0, < 3)
     unicorn (5.2.0)
       kgio (~> 2.6)
@@ -390,10 +412,10 @@ GEM
       tzinfo
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.4.0)
+    web-console (3.5.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
-      debug_inspector
+      bindex (>= 0.4.0)
       railties (>= 5.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
@@ -425,6 +447,7 @@ DEPENDENCIES
   spree!
   spree_auth_devise!
   spree_gateway!
+  spree_i18n!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
