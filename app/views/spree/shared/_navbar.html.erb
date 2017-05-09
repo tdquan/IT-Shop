@@ -27,7 +27,7 @@
           <% if spree_user_signed_in? %>
             <b><%= spree_current_user.first_name || "You" %></b>
           <% else %>
-            <b>Sign in</b>
+            <b><%= Spree.t(:navbar_sign_in) %></b>
           <% end %>
         </a>
         <div class="dropdown-menu text-center" role="menu" aria-labelledby="dropdownMenuLink">
