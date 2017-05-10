@@ -7,9 +7,46 @@
 }
 
 #checkout .nav-pills > li.active > a, #checkout .nav-pills > li.active > a:hover, #checkout .nav-pills > li.active > a:focus {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
 }
 
+
+#checkout {
+  .nav-justified > li > a, .nav-tabs.nav-justified > li > a:focus{
+    background-color: rgb(70,110,242);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .nav-pills > li + li > a{
+    background-color: rgb(0,180,240);
+  }
+  .nav-pills > .next > a{
+    background-color: rgb(0,180,240);
+  }
+  .nav-pills > .last > a{
+    background-color: green;
+  }
+}
+#checkout-step-address{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#checkout .row .col-sm-9 ul {
+  display: flex;
+  justify-content: space-between;
+}
 #summary-order-total{
   font-size:20px;
 }
