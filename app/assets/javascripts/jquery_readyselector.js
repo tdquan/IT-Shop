@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function() {
 
     $( ".close" ).click(function() {
       $( ".promotion" ).hide( "slow", function() {
-        alert( "Comeback later for our best deals." );
+        
       });
     });
 
