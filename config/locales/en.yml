@@ -331,6 +331,17 @@ en:
     resume_pack1: anglais
     resume_pack2: anglais
     resume_pack3: anglais
+    navbar_sign_in: Sign in
+    package1_laptop: Laptop
+    package2_desktop: Desktop
+    package3_workstation: Workstation
+    btn_select_package: Select
+    coupon_code_apply: Coupon code apply
+    code_promo: Coupon code
+    en_stock: In stock
+    ajout_rapide: Quick add
+    customiser: Customiser
+
     filter: Filter
     quick_search: Quick Search . . .
     abbreviation: Abbreviation
@@ -369,7 +380,7 @@ en:
     add_state: Add State
     add_stock: Add Stock
     add_stock_management: Add Stock Management
-    add_to_cart: Add To Basket
+    add_to_cart: Add To Cart
     add_variant: Add Variant
     additional_item: Additional Item Cost
     address1: Address
