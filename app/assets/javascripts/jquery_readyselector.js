@@ -4,10 +4,8 @@ $(document).on('turbolinks:load', function() {
   $('.home.show').ready(function() {
     $('.package-selection').css({'margin-bottom': $('.package-details').height()});
 
-    $( ".close" ).click(function() {
-      $( ".promotion" ).hide( "slow", function() {
-        
-      });
+    $(".close").click(function() {
+      $(".promotion").hide("slow", function() {});
     });
 
     // Equal heights for all features columns
@@ -46,4 +44,13 @@ $(document).on('turbolinks:load', function() {
   setTimeout(function() {
     $('#flash-message').slideUp();
   }, 4000);
+
+  //Star rating
+  $(function() {
+    return $(".starrr").starrr();
+  });
+
+  $('.starrr').on('starrr:change', function(e, value) {
+    $(this).siblings('.star-count').html(value);
+  });
 });
