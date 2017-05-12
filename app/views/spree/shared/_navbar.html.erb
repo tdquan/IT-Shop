@@ -1,7 +1,6 @@
 <nav class="navbar row">
   <div class="col-md-8 col-md-offset-2">
     <!-- LOGO -->
-
     <div class="logo-group">
       <%= link_to root_path do %>
         <div class="navbar_logo">
@@ -15,6 +14,7 @@
     <!-- Trigger the modal with a button -->
     <div class="navbar-group float-right">
       <a data-toggle="modal" data-target="#myModal"><b>Contact</b></a>
+      <%= link_to "FR", "/locale/set?locale=fr", class: "fr" %>/&nbsp;<%= link_to "EN", "/locale/set?locale=en", class: "en" %>
     </div>
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -27,7 +27,7 @@
           <% if spree_user_signed_in? %>
             <b><%= spree_current_user.first_name || "You" %></b>
           <% else %>
-            <b>Sign in</b>
+            <b><%= Spree.t(:navbar_sign_in) %></b>
           <% end %>
         </a>
         <div class="dropdown-menu text-center" role="menu" aria-labelledby="dropdownMenuLink">
@@ -40,9 +40,7 @@
           <% end %>
 
         </div>
-        <div>
-          <%= link_to "FR", "/locale/set?locale=fr", class: "fr" %>&nbsp;&nbsp;/&nbsp;&nbsp;<%= link_to "EN", "/locale/set?locale=en", class: "en" %>
-        </div>
+
 
       </div>
 

@@ -1,6 +1,4 @@
 fr:
-
-
   date:
     abbr_day_names:
       - dim
@@ -574,6 +572,17 @@ fr:
     resume_pack1: traduction française
     resume_pack2: traduction française
     resume_pack3: traduction française
+    navbar_sign_in: Connexion
+    package1_laptop: Portable
+    package2_desktop: Bureau
+    package3_workstation: Station de travail
+    btn_select_package: Sélectionner
+    coupon_code_apply: Ajouter
+    code_promo: Code promo
+    in_stock: En stock
+    ajout_rapide: Ajout rapide
+    customiser: Customiser
+
     abbreviation: Abréviation
     accept: Accepter
     acceptance_errors: Erreurs d'acceptation

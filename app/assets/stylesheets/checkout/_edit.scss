@@ -24,6 +24,7 @@
 .btn-save-and-continue{
   width:160px;
 
+
 #checkout {
   .nav-justified > li > a, .nav-tabs.nav-justified > li > a:focus{
     background-color: rgb(70,110,242);
@@ -53,5 +54,12 @@
 #checkout .row .col-sm-9 ul {
   display: flex;
   justify-content: space-between;
+}
+#summary-order-total{
+  font-size:20px;
+}
 
+.btn-save-and-continue{
+  width:160px;
+>>>>>>> f74c71ea02c027635c02eda16edab88e31fdbbd5
 }
