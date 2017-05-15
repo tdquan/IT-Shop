@@ -569,7 +569,7 @@ fr:
         one: "%{resource} n'a pu etre sauvegardé à cause d' 1 erreur:"
         other: "%{resource} n'a pu etre sauvegardé à cause de %{count} erreurs:"
   spree:
-    resume_pack1: traduction française
+    resume_pack1: Une sélection d'une gamme robuste et performante d'ordinateur Portable, adapté selon votre utilisation professionnel ou celle de votre collaborateur.
     resume_pack2: traduction française
     resume_pack3: traduction française
     navbar_sign_in: Connexion
