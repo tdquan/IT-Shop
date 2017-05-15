@@ -8,7 +8,7 @@ Spree::Product.delete_all
 ##### TAXONOMY & TAXONS #####
 
 ## basic laptop
-basic_laptop = Spree::Taxonomy.create!(name:'Pack Business')
+basic_laptop = Spree::Taxonomy.create!(name:'Pack Bussiness')
 basic_laptop_taxon = Spree::Taxon.last
 basic_laptop_computer = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Computer')
 basic_laptop_mouse = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Mouse')
