@@ -132,5 +132,51 @@
   color: $blue-primary;
 }
 .modal-backdrop{
-  position: static !important;
+  // position: static !important;
+}
+
+//sign-in
+
+.modal-content{
+  margin-top: 80px;
+
+  .modal-header{
+    text-align: center;
+  }
+}
+
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 40px;
+
+  .sign-in{
+    border: 1px blue solid;
+    width: 450px;
+    margin-bottom: 10px;
+    #password-credentials{
+      display: center;
+      align-items: center;
+      margin: 20px;
+      text-align: center;
+      width: 400px;
+
+      .form-group{
+        width: 400px;
+        height: 40px;
+
+      }
+      .checkbox{
+        width: 400px;
+        height: 40px;
+        text-align: left;
+        margin-bottom: 20px;
+
+      }
+
+    }
+  }
 }

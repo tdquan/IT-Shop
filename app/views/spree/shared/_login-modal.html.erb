@@ -1,0 +1,25 @@
+<div class="modal fade" id="myModal-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= Spree.t(:login_as_existing) %></h4>
+      </div>
+      <div class="modal-body">
+
+        <div id="existing-customer" class="panel-body" data-hook="login">
+          <% if flash[:alert] %>
+            <div class="alert alert-danger"><%= flash[:alert] %></div>
+          <% end %>
+         <%= render 'spree/shared/login' %>
+
+         <div class="text-center">
+           <%= Spree.t(:or) %>
+           <%= link_to Spree.t(:create_a_new_account), spree.signup_path %> |
+           <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+         </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
