@@ -328,7 +328,11 @@ en:
         one: '1 error prohibited with %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
   spree:
-    resume_pack1: anglais
+    resume_pack1: A selection of a rugged and powerful laptop computer range, adapted to your professional use or that of your collaborator.
+    resume_pack1_bussiness: Pack Business
+    resume_pack1_polyvalent: Pack Polyvalent
+    resume_pack1_performance: Pack Performance
+    resume_pack1_title: Choose your laptop package
     resume_pack2: anglais
     resume_pack3: anglais
     navbar_sign_in: Sign in
