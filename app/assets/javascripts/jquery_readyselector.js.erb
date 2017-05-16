@@ -2,12 +2,12 @@ $(document).on('turbolinks:load', function() {
   // Columns heights in certain pages
 
   $('.home.show').ready(function() {
-    $('.package-selection').css({'margin-bottom': $('.package-details').height()});
+    $('.package-selection').css(
+      {'margin-bottom': $('.package-details').height()
+    });
 
-    $( ".close" ).click(function() {
-      $( ".promotion" ).hide( "slow", function() {
-        
-      });
+    $(".promotion .close").on('click', function() {
+      $(".promotion").hide("slow");
     });
 
     // Equal heights for all features columns
@@ -46,4 +46,7 @@ $(document).on('turbolinks:load', function() {
   setTimeout(function() {
     $('#flash-message').slideUp();
   }, 4000);
+
+  test = Spree.url_params['locale'];
+  $("a[class=" + test + "]").css("font-weight", "bold");
 });

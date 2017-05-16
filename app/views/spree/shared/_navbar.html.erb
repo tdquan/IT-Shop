@@ -14,12 +14,10 @@
     <!-- Trigger the modal with a button -->
     <div class="navbar-group float-right">
       <a data-toggle="modal" data-target="#myModal"><b>Contact</b></a>
-      <%= link_to "FR", "/locale/set?locale=fr", class: "fr" %>/&nbsp;<%= link_to "EN", "/locale/set?locale=en", class: "en" %>
+      <%= link_to "FR", "/locale/set?locale=fr", class: "fr" %>/&nbsp &nbsp;<%= link_to "EN", "/locale/set?locale=en", class: "en" %>
+
     </div>
     <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-      <%= render 'spree/shared/navbar_contact_modal' %>
-    </div>
 
     <div class="navbar-group float-right">
       <div class="dropdown">
@@ -30,21 +28,22 @@
             <b><%= Spree.t(:navbar_sign_in) %></b>
           <% end %>
         </a>
+
         <div class="dropdown-menu text-center" role="menu" aria-labelledby="dropdownMenuLink">
           <% if spree_user_signed_in? %>
             <%= link_to Spree.t(:my_account), spree.account_path, class: "dropdown-item" %>
             <%= link_to Spree.t(:logout), spree.logout_path, class: "dropdown-item" %>
           <% else %>
-            <%= link_to Spree.t(:login), spree.login_path, class: "dropdown-item" %>
-            <%= link_to Spree.t(:signup), spree.signup_path, class: "dropdown-item" %>
+            <!-- <%= link_to Spree.t(:login), spree.login_path, class: "dropdown-item" %> -->
+            <a data-toggle="modal" data-target="#myModal-popup" class="dropdown-item"><%= Spree.t(:login) %></a>
+
+            <!-- <%= link_to Spree.t(:signup), spree.signup_path, class: "dropdown-item" %> -->
+            <a class="dropdown-item" data-toggle="modal" data-target="#myModal-signup"><%= Spree.t(:signup) %></a>
           <% end %>
-
         </div>
-
-
       </div>
-
     </div>
+
     <!-- SHOPPING CART -->
     <% if spree_user_signed_in? %>
       <div class="cart-group navbar-group float-right">
