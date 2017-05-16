@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.7.2"
+lock "3.8.0"
 
 set :application, "shop-it"
 set :repo_url, "git@git.cbm-groupe.fr:tdquan/shop-it.git"
