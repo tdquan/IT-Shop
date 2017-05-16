@@ -1,12 +1,12 @@
 <div class="container-fluid">
-  <h3 class="text-center">Choose your laptop package</h3>
+  <h3 class="text-center"><%= Spree.t(:resume_pack1_title) %></h3>
 
   <section class="package-selection homepage-section row">
      <div class="col-md-8 col-md-offset-2">
       <ul class="nav nav-pills nav-justified">
         <li class="active package-overview-container container-laptop">
           <a data-toggle="pill" href="#basic-laptop-package" class="package-overview-select clearfix">
-            <h4><%= @basic.name %></h4>
+            <h4><%= Spree.t(:resume_pack1_bussiness) %></h4>
             <div class="text-center package-icon-container"><%= image_tag "laptop_gear1.png", alt: "Basic Pakage image", class: "package-icon" %></div>
             <ul class="package-overview-details text-left">
               <li>Dell Computer</li>
@@ -15,11 +15,16 @@
             </ul>
             <b class="package-price">2,058 €</b>
           </a>
+          <div class="row lead text-center">
+            <div class="starrr"></div>
+            <span class="star-count">0</span>
+            star(s)
+          </div>
         </li>
         <hr class="hidden-md hidden-lg">
         <li class="package-overview-container container-laptop">
           <a data-toggle="pill" href="#standard-laptop-package" class="package-overview-select clearfix">
-            <h4><%= @standard.name %></h4>
+            <h4><%= Spree.t(:resume_pack1_polyvalent) %></h4>
             <div class="text-center package-icon-container"><%= image_tag "laptop_gear2.png", alt: "Standard Pakage image", class: "package-icon" %></div>
             <ul class="package-overview-details text-left">
               <li>Dell Computer or Apple Computer</li>
@@ -29,11 +34,16 @@
             </ul>
             <b class="package-price">2,137 €</b>
           </a>
+          <div class="row lead text-center">
+            <div class="starrr"></div>
+            <span class="star-count">0</span>
+            star(s)
+          </div>
         </li>
         <hr class="hidden-md hidden-lg">
         <li class="package-overview-container container-laptop">
           <a data-toggle="pill" href="#premium-laptop-package" class="package-overview-select clearfix">
-            <h4><%= @premium.name %></h4>
+            <h4><%= Spree.t(:resume_pack1_performance) %></h4>
             <div class="text-center package-icon-container"><%= image_tag "laptop_gear3.png", alt: "Premium Pakage image", class: "package-icon" %></div>
             <ul class="package-overview-details text-left">
               <li>Dell Computer or Apple Computer</li>
@@ -44,6 +54,11 @@
             </ul>
             <b class="package-price">2,436 €</b>
           </a>
+          <div class="row lead text-center">
+            <div class="starrr"></div>
+            <span class="star-count">0</span>
+            star(s)
+          </div>
         </li>
       </ul>
     </div>

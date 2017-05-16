@@ -49,4 +49,13 @@ $(document).on('turbolinks:load', function() {
 
   test = Spree.url_params['locale'];
   $("a[class=" + test + "]").css("font-weight", "bold");
+
+  //Star rating
+  $(function() {
+    return $(".starrr").starrr();
+  });
+
+  $('.starrr').on('starrr:change', function(e, value) {
+    $(this).siblings('.star-count').html(value);
+  });
 });

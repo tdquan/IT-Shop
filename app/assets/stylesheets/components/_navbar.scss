@@ -143,9 +143,6 @@
   .modal-header{
     text-align: center;
   }
-  .text-center{
-    margin-top: 10px;
-  }
 }
 
 
@@ -154,11 +151,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px 15px 40px;
 
   .sign-in{
     border: 1px blue solid;
     width: 450px;
-
+    margin-bottom: 10px;
     #password-credentials{
       display: center;
       align-items: center;
