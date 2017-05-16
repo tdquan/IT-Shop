@@ -215,8 +215,8 @@ fr:
         address2: Adresse complémentaire
         city: Ville
         country: Pays
-        firstname: Prénom
-        lastname: Nom
+        first_name: Prénom
+        last_name: Nom
         phone: Téléphone
         state: Province / Région / État
         zipcode: Code Postal
@@ -348,7 +348,6 @@ fr:
       spree/user:
         email: Courriel
         password: Mot de passe
-        password_confirmation: Confirmation du mot de passe
       spree/variant:
         cost_currency: Devise du prix
         cost_price: Prix coûtant
@@ -1389,6 +1388,7 @@ fr:
     server_error: Le serveur a retourné un erreur
     settings: Paramètres
     ship: livraison
+    sign_up: s’inscrire
     ship_address: Adresse de livraison
     ship_total: Envois Totales
     shipment: Livraison

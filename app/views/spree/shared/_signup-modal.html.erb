@@ -3,36 +3,36 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sign up!</h4>
+        <h4 class="modal-title"><%= Spree.t(:sign_up) %></h4>
       </div>
       <div class="modal-body">
 
         <div class="sign-in">
           <fieldset id="password-credentials">
-            <h1><strong>Nouveau client</strong></h1>
+            <h1><strong><%= Spree.t(:new_customer)%></strong></h1>
             <div class="all-form">
               <div class="form-group">
-                <input class="form-control" tabindex="1" placeholder="first_name" type="email" name="spree_user[email]" id="spree_user_email">
+                <input class="form-control" tabindex="1" placeholder="<%= Spree.t(:first_name) %>" type="text">
               </div>
 
               <div class="form-group">
-                <input class="form-control" tabindex="1" placeholder="last_name" type="email" name="spree_user[email]" id="spree_user_email">
+                <input class="form-control" tabindex="2" placeholder="<%= Spree.t(:last_name) %>" type="text">
               </div>
 
               <div class="form-group">
-                <input class="form-control" tabindex="1" placeholder="Courriel" type="email" name="spree_user[email]" id="spree_user_email">
+                <input class="form-control" tabindex="3" placeholder="<%= Spree.t(:email) %>" type="text" >
               </div>
                 <hr>
               <div class="form-group">
-                <input class="form-control" tabindex="2" placeholder="Mot de passe" type="password" name="spree_user[password]" id="spree_user_password">
+                <input class="form-control" tabindex="4" placeholder="<%= Spree.t(:password) %>" type="password">
               </div>
 
               <div class="form-group">
-                <input class="form-control" tabindex="2" placeholder=" Confirm Mot de passe" type="password" name="spree_user[password]" id="spree_user_password">
+                <input class="form-control" tabindex="5" placeholder="<%= Spree.t(:confirm_password) %>" type="password">
               </div>
 
               <div class="form-group">
-                <input type="submit" name="commit" value="Connexion" class="btn btn-primary btn-block" tabindex="3" data-disable-with="Connexion">
+                <input type="submit" name="commit" value="<%= Spree.t(:create) %>" class="btn btn-primary btn-block" tabindex="6" data-disable-with="Connexion">
               </div>
             </div>
 
@@ -40,8 +40,8 @@
        </div>
        <div class="text-center">
            ou
-           <a href="/signup">Créer un nouveau compte</a> |
-           <a href="/password/recover">Mot de passe oublié</a>
+           <a href="/signup"><%= Spree.t(:create_a_new_account)%> </a> |
+           <a href="/password/recover"><%= Spree.t(:forgot_password)%></a>
          </div>
 
       </div>
