@@ -8,14 +8,14 @@ Spree::Product.delete_all
 ##### TAXONOMY & TAXONS #####
 
 ## basic laptop
-basic_laptop = Spree::Taxonomy.create!(name:'Basic Laptop')
+basic_laptop = Spree::Taxonomy.create!(name:'Pack Bussiness')
 basic_laptop_taxon = Spree::Taxon.last
 basic_laptop_computer = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Computer')
 basic_laptop_mouse = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Mouse')
 basic_laptop_keyboard = Spree::Taxon.create!(taxonomy_id: basic_laptop.id, parent_id: basic_laptop_taxon.id, name: 'Keyboard')
 
 ## standard laptop
-standard_laptop = Spree::Taxonomy.create!(name:'Standard Laptop')
+standard_laptop = Spree::Taxonomy.create!(name:'Pack Polyvalent')
 standard_laptop_taxon = Spree::Taxon.last
 standard_laptop_computer = Spree::Taxon.create!(taxonomy_id: standard_laptop.id, parent_id: standard_laptop_taxon.id, name: 'Computer')
 standard_laptop_mouse = Spree::Taxon.create!(taxonomy_id: standard_laptop.id, parent_id: standard_laptop_taxon.id, name: 'Mouse')
@@ -23,7 +23,7 @@ standard_laptop_keyboard = Spree::Taxon.create!(taxonomy_id: standard_laptop.id,
 standard_laptop_software = Spree::Taxon.create!(taxonomy_id: standard_laptop.id, parent_id: standard_laptop_taxon.id, name: 'Software')
 
 ## premium laptop
-premium_laptop = Spree::Taxonomy.create!(name:'Premium Laptop')
+premium_laptop = Spree::Taxonomy.create!(name:'Pack Performance')
 premium_laptop_taxon = Spree::Taxon.last
 premium_laptop_computer = Spree::Taxon.create!(taxonomy_id: premium_laptop.id, parent_id: premium_laptop_taxon.id, name: 'Computer')
 premium_laptop_mouse = Spree::Taxon.create!(taxonomy_id: premium_laptop.id, parent_id: premium_laptop_taxon.id, name: 'Mouse')
