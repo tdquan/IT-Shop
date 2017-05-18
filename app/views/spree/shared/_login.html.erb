@@ -1,7 +1,7 @@
   <%= form_for Spree::User.new, as: :spree_user, url: spree.create_new_session_path do |f| %>
    <div class="sign-in">
       <fieldset id="password-credentials">
-        <h1><strong>sign in!</strong></h1>
+        <h1><strong><%= Spree.t(:login) %></strong></h1>
         <div class="all-form">
           <div class="form-group">
             <%= f.email_field :email, class: 'form-control', tabindex: 1, placeholder: Spree.t(:email) %>

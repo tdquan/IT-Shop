@@ -34,7 +34,7 @@
     <div class="package-customize-btn-grp text-center row">
       <div class="col-md-5 col-md-offset-7">
         <%= link_to package_path(package_name: @premium.name.downcase), class: "btn btn-danger package-customize-btn" do %>
-          Customize
+          <%= Spree.t(:customize) %>
         <% end %>
       </div>
     </div>

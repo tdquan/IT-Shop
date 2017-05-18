@@ -38,7 +38,7 @@
             <a data-toggle="modal" data-target="#myModal-popup" class="dropdown-item"><%= Spree.t(:login) %></a>
 
             <!-- <%= link_to Spree.t(:signup), spree.signup_path, class: "dropdown-item" %> -->
-            <a class="dropdown-item" data-toggle="modal" data-target="#myModal-signup"><%= Spree.t(:signup) %></a>
+            <a class="dropdown-item" data-toggle="modal" data-target="#myModal-signup"><%= Spree.t(:sign_up) %></a>
           <% end %>
         </div>
       </div>
@@ -67,6 +67,9 @@
 
 <%= render "spree/shared/login-modal" %>
 <%= render "spree/shared/signup-modal" %>
+<div id="myModal" class="modal fade" role="dialog">
+  <%= render 'spree/shared/navbar_contact_modal' %>
+</div>
 <div id="flash-message" class="col-md-8 col-md-offset-2">
   <%= flash_messages %>
 </div>

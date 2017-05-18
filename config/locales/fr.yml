@@ -215,8 +215,8 @@ fr:
         address2: Adresse complémentaire
         city: Ville
         country: Pays
-        firstname: Prénom
-        lastname: Nom
+        first_name: Prénom
+        last_name: Nom
         phone: Téléphone
         state: Province / Région / État
         zipcode: Code Postal
@@ -348,7 +348,6 @@ fr:
       spree/user:
         email: Courriel
         password: Mot de passe
-        password_confirmation: Confirmation du mot de passe
       spree/variant:
         cost_currency: Devise du prix
         cost_price: Prix coûtant
@@ -573,13 +572,21 @@ fr:
     package1_laptop: Portable
     package2_desktop: Bureau
     package3_workstation: Station de travail
+    price_including: Prix ​​incluant TVA
+    customize_package: Personnalisez votre colis
+    choice_computer: Quel ordinateur vous convient?
+    choice_keybord: Quel clavier vous convient?
+    choice_mouse: Quelle souris vous convient?
+    choice_monitor: Quel moniteur vous convient?
+    choice_software: Quel logiciel vous convient?
     btn_select_package: Sélectionner
     coupon_code_apply: Ajouter
     code_promo: Code promo
     in_stock: En stock
     ajout_rapide: Ajout rapide
-    customiser: Customiser
+    customize: Customiser
 
+    free_delivery: Livraison gratuite
     abbreviation: Abréviation
     accept: Accepter
     acceptance_errors: Erreurs d'acceptation
@@ -1400,6 +1407,7 @@ fr:
     server_error: Le serveur a retourné un erreur
     settings: Paramètres
     ship: livraison
+    sign_up: s’inscrire
     ship_address: Adresse de livraison
     ship_total: Envois Totales
     shipment: Livraison

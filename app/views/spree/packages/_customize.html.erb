@@ -1,6 +1,6 @@
-<h3>Customize your package</h3>
+<h3><%= Spree.t(:customize_package) %></h3>
 <div class="customize-card first-card">
-  <p>Which computer is right for you?</p>
+  <p><%= Spree.t(:choice_computer) %></p>
   <ul class="list-inline custom-options">
     <% (@package.taxons.find_by name: 'Computer').products.each do |product| %>
       <li><div class="radio">
@@ -16,7 +16,7 @@
 </div>
 <hr>
 <div class="customize-card">
-  <p>Which keyboard is right for you?</p>
+  <p><%= Spree.t(:choice_keybord) %></p>
   <ul class="list-inline custom-options">
     <% (@package.taxons.find_by name: 'Keyboard').products.each do |product| %>
       <li><div class="radio">
@@ -32,7 +32,7 @@
 </div>
 <hr>
 <div class="customize-card">
-  <p>Which mouse is right for you?</p>
+  <p><%= Spree.t(:choice_mouse) %></p>
   <ul class="list-inline custom-options">
     <% (@package.taxons.find_by name: 'Mouse').products.each do |product| %>
       <li><div class="radio">
@@ -49,7 +49,7 @@
 <% if @package.taxons.find_by name: 'Monitor' %>
 <hr>
 <div class="customize-card">
-  <p>Which monitor is right for you?</p>
+  <p><%= Spree.t(:choice_monitor) %></p>
   <ul class="list-inline custom-options">
     <% (@package.taxons.find_by name: 'Monitor').products.each do |product| %>
       <li><div class="radio">
@@ -67,7 +67,7 @@
 <% if @package.taxons.find_by name: 'Softwares' %>
 <hr>
 <div class="customize-card">
-  <p>Which software is right for you?</p>
+  <p><%= Spree.t(:choice_software) %></p>
   <ul class="list-inline custom-options">
     <% (@package.taxons.find_by name: 'Softwares').products.each do |product| %>
       <li><div class="radio">
