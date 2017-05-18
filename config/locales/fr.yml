@@ -579,13 +579,21 @@ fr:
     package1_laptop: Portable
     package2_desktop: Bureau
     package3_workstation: Station de travail
+    price_including: Prix ​​incluant TVA
+    customize_package: Personnalisez votre colis
+    choice_computer: Quel ordinateur vous convient?
+    choice_keybord: Quel clavier vous convient?
+    choice_mouse: Quelle souris vous convient?
+    choice_monitor: Quel moniteur vous convient?
+    choice_software: Quel logiciel vous convient?
     btn_select_package: Sélectionner
     coupon_code_apply: Ajouter
     code_promo: Code promo
     in_stock: En stock
     ajout_rapide: Ajout rapide
-    customiser: Customiser
+    customize: Customiser
 
+    free_delivery: Livraison gratuite
     abbreviation: Abréviation
     accept: Accepter
     acceptance_errors: Erreurs d'acceptation

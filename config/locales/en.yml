@@ -338,13 +338,21 @@ en:
     package1_laptop: Laptop
     package2_desktop: Desktop
     package3_workstation: Workstation
+    price_including: Price including TVA
+    customize_package: Customize your package
+    choice_computer: Which computer is right for you?
+    choice_keybord: Which keyboard is right for you?
+    choice_mouse: Which mouse is right for you?
+    choice_monitor: Which monitor is right for you?
+    choice_software: Which software is right for you?
     btn_select_package: Select
     coupon_code_apply: Coupon code apply
     code_promo: Coupon code
     en_stock: In stock
     ajout_rapide: Quick add
-    customiser: Customiser
+    customize: Customize
 
+    free_delivery: Free delivery
     filter: Filter
     quick_search: Quick Search . . .
     abbreviation: Abbreviation

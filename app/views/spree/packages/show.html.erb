@@ -1,6 +1,6 @@
 <%= render "spree/shared/navbar" %>
 <main class="container">
-  <%= simple_form_for :package, html: { class: "col-md-8 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
+  <%= simple_form_for :package, html: { class: "col-md-9 simpleform_col_9 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
     <div class="show-package row">
       <div class="col-md-4 text-center">
         <h3><%= @package.name %></h3>
@@ -18,19 +18,19 @@
         <div class="price-card">
           <p class="total-package-price"></p>
           <div class="details-small-size">
-            <p>Free delivery</p>
-            <p>Price including TVA</p>
+            <p><%= Spree.t(:free_delivery) %></p>
+            <p><%= Spree.t(:price_including) %></p>
           </div>
           <hr>
           <div class="row">
-            <p class="col-md-3 quantity-input-title">Quantity:</p>
+            <p class="col-md-3 quantity-input-title"><%= Spree.t(:quantity) %>:</p>
             <%= f.input :quantity, as: :integer, input_html: {  class: "col-md-9 customized-package-quantity-input float-right text-right", value: 1 }, wrapper_html: { class: 'no-padding' }, label: false %>
           </div>
           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-            Add to cart
+            <%= Spree.t(:add_to_cart) %>
           <% end %>
           <br><br>
-          <%= link_to "Check out", checkout_url, class: 'btn btn-danger'  %>
+          <%= link_to Spree.t(:checkout), checkout_url, class: 'btn btn-danger'  %>
         </div>
       </div>
     </div>
