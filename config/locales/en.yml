@@ -328,13 +328,6 @@ en:
         one: '1 error prohibited with %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
   spree:
-    resume_pack1: A selection of a rugged and powerful laptop computer range, adapted to your professional use or that of your collaborator.
-    resume_pack1_bussiness: Pack Business
-    resume_pack1_polyvalent: Pack Polyvalent
-    resume_pack1_performance: Pack Performance
-    resume_pack1_title: Choose your laptop package
-    resume_pack2: anglais
-    resume_pack3: anglais
     navbar_sign_in: Sign in
     package1_laptop: Laptop
     package2_desktop: Desktop
@@ -1089,6 +1082,24 @@ en:
     response_code: Response Code
     resume: resume
     resumed: Resumed
+    resume_pack1: A selection of a rugged and powerful laptop computer range, adapted to your professional use or that of your collaborator.
+    resume_pack1_bussiness: Pack Business
+    resume_pack1_polyvalent: Pack Polyvalent
+    resume_pack1_performance: Pack Performance
+    resume_pack1_title: Choose your laptop package
+    resume_pack2: We make it easy to find your ideal desktop or all-in-one with our top picks.
+    resume_pack2_title: Choose your desktop package
+    resume_pack3: compact look powerful and distinct Workstation package that makes your ideal choice possible.
+    resume_pack3_title: Choose your Workstation package
+    pack_bussiness_description: A selection of a rugged and powerful laptop computer range, adapted to your professional use or that of your collaborator.
+    pack_polyvalent_description: A selection of a rugged and powerful laptop computer range, adapted to your professional use or that of your collaborator.
+    pack_performance_description: A selection of a rugged and powerful laptop computer range, adapted to your professional use or that of your collaborator.
+    standard_desktop_description: We make it easy to find your ideal desktop or all-in-one with our top picks.
+    basic_desktop_description: We make it easy to find your ideal desktop or all-in-one with our top picks.
+    premium_desktop_description: We make it easy to find your ideal desktop or all-in-one with our top picks.
+    basic_workstation_description: compact look powerful and distinct Workstation package that makes your ideal choice possible.
+    standard_workstation_description: compact look powerful and distinct Workstation package that makes your ideal choice possible.
+    premium_workstation_description: compact look powerful and distinct Workstation package that makes your ideal choice possible.
     return: return
     return_authorization: Return Authorisation
     return_authorization_reasons:
