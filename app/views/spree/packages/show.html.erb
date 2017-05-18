@@ -1,8 +1,8 @@
 <%= render "spree/shared/navbar" %>
-<main class="container">
-  <%= simple_form_for :package, html: { class: "col-md-9 simpleform_col_9 col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
+<main class="container-fluid">
+  <%= simple_form_for :package, html: { class: "col-md-8  col-md-offset-2" }, url: add_customized_package_path(@package) do |f| %>
     <div class="show-package row">
-      <div class="col-md-4 text-center">
+      <div class="col-md-3 text-center">
         <h3><%= @package.name %></h3>
         <%= image_tag "#{@package.name.split(' ').map(&:downcase)[1]}.png", class: "package-icon" %>
         <br><br>
@@ -14,7 +14,7 @@
       <div class="col-md-5">
         <%= render 'customize' %>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="price-card">
           <p class="total-package-price"></p>
           <div class="details-small-size">
