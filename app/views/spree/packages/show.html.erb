@@ -8,7 +8,7 @@
         <br><br>
         <div class="specs text-left">
           <p>Description:</p>
-          <p class="details-small-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="details-small-size"><%= Spree.t("#{@package.name.downcase.split(' ').join('_')}_description") %></p>
         </div>
       </div>
       <div class="col-md-5">

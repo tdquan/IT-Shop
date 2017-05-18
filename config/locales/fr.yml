@@ -568,13 +568,6 @@ fr:
         one: "%{resource} n'a pu etre sauvegardé à cause d' 1 erreur:"
         other: "%{resource} n'a pu etre sauvegardé à cause de %{count} erreurs:"
   spree:
-    resume_pack1: Une sélection d'une gamme robuste et performante d'ordinateur Portable, adapté selon votre utilisation professionnel ou celle de votre collaborateur.
-    resume_pack1_bussiness: Kit Business
-    resume_pack1_polyvalent: Kit Polyvalent
-    resume_pack1_performance: Kit Performance
-    resume_pack1_title: Choisissez votre forfait pour ordinateur portable
-    resume_pack2: traduction française
-    resume_pack3: traduction française
     navbar_sign_in: Connexion
     package1_laptop: Portable
     package2_desktop: Bureau
@@ -1347,6 +1340,24 @@ fr:
     response_code: Code de réponse
     resume: reprendre
     resumed: repris
+    resume_pack1: Une sélection d'une gamme robuste et performante d'ordinateur Portable, adapté selon votre utilisation professionnel ou celle de votre collaborateur.
+    resume_pack1_bussiness: Kit Business
+    resume_pack1_polyvalent: Kit Polyvalent
+    resume_pack1_performance: Kit Performance
+    resume_pack1_title: Choisissez votre forfait pour ordinateur portable
+    resume_pack2: Nous vous aidons à trouver votre bureau idéal ou tout-en-un avec nos meilleurs choix.
+    resume_pack2_title: Choisissez votre forfait pour ordinateur bureau
+    resume_pack3: Un ensemble de station de travail puissant et distinct qui offre un choix idéal.
+    resume_pack3_title: Choisissez votre forfait pour station de travail
+    pack_bussiness_description: Une sélection d'une gamme robuste et performante d'ordinateur Portable, adapté selon votre utilisation professionnel ou celle de votre collaborateur.
+    pack_polyvalent_description: Une sélection d'une gamme robuste et performante d'ordinateur Portable, adapté selon votre utilisation professionnel ou celle de votre collaborateur.
+    pack_performance_description: Une sélection d'une gamme robuste et performante d'ordinateur Portable, adapté selon votre utilisation professionnel ou celle de votre collaborateur.
+    standard_desktop_description: Nous vous aidons à trouver votre bureau idéal ou tout-en-un avec nos meilleurs choix.
+    basic_desktop_description: Nous vous aidons à trouver votre bureau idéal ou tout-en-un avec nos meilleurs choix.
+    premium_desktop_description: Nous vous aidons à trouver votre bureau idéal ou tout-en-un avec nos meilleurs choix.
+    basic_workstation_description: Choisissez votre forfait pour station de travail
+    standard_workstation_description: Choisissez votre forfait pour station de travail
+    premium_workstation_description: Choisissez votre forfait pour station de travail
     return: retourner
     return_authorization: Retour d'autorisation
     return_authorization_reasons: Raisons de retour d'autorisation
